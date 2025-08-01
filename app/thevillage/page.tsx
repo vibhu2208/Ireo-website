@@ -7,72 +7,72 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 
 const projectData = {
-  name: "IREO Waterfront",
-  slug: "waterfront",
+  name: "IREO The Village",
+  slug: "thevillage",
   heroImages: [
-    "/placeholder.svg?height=600&width=1000&text=Waterfront+Lake+View",
-    "/placeholder.svg?height=600&width=1000&text=Waterfront+Residences",
-    "/placeholder.svg?height=600&width=1000&text=Waterfront+Amenities",
-    "/placeholder.svg?height=600&width=1000&text=Waterfront+Interior",
+    "/placeholder.svg?height=600&width=1000&text=The+Village+Villas",
+    "/placeholder.svg?height=600&width=1000&text=The+Village+Gardens",
+    "/placeholder.svg?height=600&width=1000&text=The+Village+Clubhouse",
+    "/placeholder.svg?height=600&width=1000&text=The+Village+Lifestyle",
   ],
   quickFacts: {
-    type: "Waterfront Residences",
-    location: "Sector 58, Gurgaon",
-    area: "1750 – 5200 SQ.FT",
-    price: "₹4.2 Cr - ₹12.8 Cr",
-    accommodation: "3, 4 & 5 BHK",
-    status: "Ready to Move",
-    possession: "Ready",
-    rating: 4.7,
+    type: "Independent Villas",
+    location: "Sector 114, Gurgaon",
+    area: "3500 – 8000 SQ.FT",
+    price: "₹8.5 Cr - ₹18.5 Cr",
+    accommodation: "4 & 5 BHK Villas",
+    status: "Under Construction",
+    possession: "Dec 2025",
+    rating: 4.9,
   },
   description: [
-    "IREO Waterfront offers a unique living experience with stunning water views and premium amenities. These ready-to-move-in residences are designed for those who appreciate the tranquility of waterfront living.",
-    "Located in the prestigious Sector 58, Waterfront provides excellent connectivity while offering a serene environment. Each residence features panoramic water views, premium finishes, and spacious layouts.",
-    "The development boasts exclusive amenities including a waterfront promenade, yacht club, swimming pool, and landscaped gardens. With immediate possession available, residents can enjoy luxury waterfront living right away.",
+    "IREO The Village represents the pinnacle of luxury villa living in Gurgaon. These independent villas offer spacious layouts, private gardens, and exclusive amenities in a gated community setting.",
+    "Located in the rapidly developing Sector 114, The Village provides a perfect blend of modern luxury and natural tranquility. Each villa is designed with contemporary architecture, premium finishes, and smart home features.",
+    "The development features a private clubhouse, landscaped gardens, recreational facilities, and 24/7 security. With possession scheduled for December 2025, residents can look forward to an unparalleled villa living experience.",
   ],
   amenities: [
-    { name: "Waterfront Promenade", icon: "🌊", description: "Beautiful waterfront walkway" },
-    { name: "Yacht Club", icon: "⛵", description: "Exclusive yacht club facilities" },
-    { name: "Swimming Pool", icon: "🏊", description: "Infinity pool with water views" },
-    { name: "Fitness Center", icon: "💪", description: "State-of-the-art gym" },
-    { name: "Spa & Wellness", icon: "🧘", description: "Luxury spa facilities" },
-    { name: "Kids Play Area", icon: "🎮", description: "Waterfront children's zone" },
-    { name: "24/7 Security", icon: "🛡️", description: "Premium security systems" },
-    { name: "Concierge", icon: "🎩", description: "Personal concierge services" },
-    { name: "Landscaped Gardens", icon: "🌳", description: "Water-themed gardens" },
-    { name: "Business Center", icon: "💼", description: "Modern business facilities" },
-    { name: "Banquet Hall", icon: "🎉", description: "Waterfront event spaces" },
-    { name: "Valet Parking", icon: "🚗", description: "Premium parking services" },
+    { name: "Private Clubhouse", icon: "🏛️", description: "Exclusive clubhouse for residents" },
+    { name: "Swimming Pool", icon: "🏊", description: "Resort-style swimming pool" },
+    { name: "Fitness Center", icon: "💪", description: "Fully equipped gymnasium" },
+    { name: "Tennis Court", icon: "🎾", description: "Professional tennis court" },
+    { name: "Kids Play Area", icon: "🎮", description: "Safe children's playground" },
+    { name: "Landscaped Gardens", icon: "🌳", description: "Beautiful community gardens" },
+    { name: "24/7 Security", icon: "🛡️", description: "Gated community security" },
+    { name: "Power Backup", icon: "⚡", description: "100% power backup" },
+    { name: "Parking", icon: "🚗", description: "Covered parking spaces" },
+    { name: "Jogging Track", icon: "🏃", description: "Dedicated jogging track" },
+    { name: "Community Hall", icon: "🎉", description: "Multi-purpose hall" },
+    { name: "Spa & Wellness", icon: "🧘", description: "Wellness center" },
   ],
   gallery: [
-    "/placeholder.svg?height=300&width=400&text=Waterfront+Living+Room",
-    "/placeholder.svg?height=300&width=400&text=Waterfront+Balcony+View",
-    "/placeholder.svg?height=300&width=400&text=Waterfront+Master+Suite",
-    "/placeholder.svg?height=300&width=400&text=Waterfront+Kitchen",
-    "/placeholder.svg?height=300&width=400&text=Waterfront+Promenade",
-    "/placeholder.svg?height=300&width=400&text=Waterfront+Pool",
-    "/placeholder.svg?height=300&width=400&text=Waterfront+Yacht+Club",
-    "/placeholder.svg?height=300&width=400&text=Waterfront+Exterior",
+    "/placeholder.svg?height=300&width=400&text=Villa+Exterior",
+    "/placeholder.svg?height=300&width=400&text=Villa+Living+Room",
+    "/placeholder.svg?height=300&width=400&text=Villa+Master+Bedroom",
+    "/placeholder.svg?height=300&width=400&text=Villa+Kitchen",
+    "/placeholder.svg?height=300&width=400&text=Private+Garden",
+    "/placeholder.svg?height=300&width=400&text=Clubhouse",
+    "/placeholder.svg?height=300&width=400&text=Swimming+Pool",
+    "/placeholder.svg?height=300&width=400&text=Community+Gardens",
   ],
   locationHighlights: {
     description:
-      "Sector 58, Gurgaon offers the perfect combination of urban connectivity and natural beauty. The waterfront location provides a unique living experience with stunning views and peaceful surroundings.",
+      "Sector 114, Gurgaon is an emerging residential hub with excellent connectivity and infrastructure. The Village offers a peaceful environment while maintaining easy access to major business districts.",
     benefits: [
-      "5 minutes to Golf Course Road",
-      "10 minutes to Cyber Hub",
-      "15 minutes to IGI Airport",
-      "Walking distance to Metro Station",
-      "Premium schools nearby",
-      "World-class healthcare facilities",
+      "10 minutes to Dwarka Expressway",
+      "15 minutes to Cyber City",
+      "20 minutes to IGI Airport",
+      "Close to upcoming Metro Station",
+      "Top schools in vicinity",
+      "Premium healthcare facilities",
     ],
     images: [
-      "/placeholder.svg?height=250&width=350&text=Waterfront+Location+Map",
-      "/placeholder.svg?height=250&width=350&text=Water+View+Connectivity",
+      "/placeholder.svg?height=250&width=350&text=Village+Location+Map",
+      "/placeholder.svg?height=250&width=350&text=Connectivity+Map",
     ],
   },
 }
 
-export default function WaterfrontPage() {
+export default function TheVillagePage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -292,9 +292,9 @@ export default function WaterfrontPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Waterfront Amenities</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Villa Amenities</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Experience luxury living with exclusive waterfront amenities and services.
+              Experience luxury villa living with exclusive amenities and services.
             </p>
             <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
           </div>
@@ -324,9 +324,9 @@ export default function WaterfrontPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Waterfront Gallery</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Villa Gallery</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Immerse yourself in the beauty of waterfront living at IREO Waterfront.
+              Explore the luxury and elegance of IREO The Village villas.
             </p>
             <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
           </div>
@@ -353,7 +353,7 @@ export default function WaterfrontPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Waterfront Location</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Prime Location</h2>
             <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
           </div>
 
@@ -391,17 +391,17 @@ export default function WaterfrontPage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100&text=Pattern')] opacity-10"></div>
         <div className="relative max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Live by the Water</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Your Dream Villa Awaits</h2>
           <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-            Experience the tranquility of waterfront living. Ready-to-move-in homes available now!
+            Experience the ultimate in luxury villa living. Book your site visit today!
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 px-4 py-2">RERA Approved</Badge>
-            <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 px-4 py-2">Ready to Move</Badge>
             <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 px-4 py-2">
-              Waterfront Living
+              Independent Villas
             </Badge>
+            <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 px-4 py-2">Gated Community</Badge>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -434,7 +434,7 @@ export default function WaterfrontPage() {
                 className="h-10 mb-4"
               />
               <p className="text-gray-400">
-                Experience luxury living at IREO Waterfront with stunning water views and premium amenities.
+                Experience luxury villa living at IREO The Village with independent villas and premium amenities.
               </p>
             </div>
             <div>
@@ -442,7 +442,7 @@ export default function WaterfrontPage() {
               <div className="space-y-2 text-gray-400">
                 <p>📞 9811750130</p>
                 <p>📧 info@ireo.in</p>
-                <p>📍 Sector 58, Gurgaon</p>
+                <p>📍 Sector 114, Gurgaon</p>
               </div>
             </div>
             <div>
@@ -451,8 +451,8 @@ export default function WaterfrontPage() {
                 <a href="/" className="text-gray-400 hover:text-white block">
                   Home
                 </a>
-                <a href="/waterfront" className="text-gray-400 hover:text-white block">
-                  Waterfront
+                <a href="/thevillage" className="text-gray-400 hover:text-white block">
+                  The Village
                 </a>
                 <a href="#" className="text-gray-400 hover:text-white block">
                   Contact
