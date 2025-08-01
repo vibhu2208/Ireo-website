@@ -10,39 +10,39 @@ const projectData = {
   name: "IREO The Village",
   slug: "thevillage",
   heroImages: [
-    "/placeholder.svg?height=600&width=1000&text=The+Village+Villas",
-    "/placeholder.svg?height=600&width=1000&text=The+Village+Gardens",
-    "/placeholder.svg?height=600&width=1000&text=The+Village+Clubhouse",
-    "/placeholder.svg?height=600&width=1000&text=The+Village+Lifestyle",
+    "/placeholder.svg?height=600&width=1000&text=Village+Independent+Villas",
+    "/placeholder.svg?height=600&width=1000&text=Village+Luxury+Homes",
+    "/placeholder.svg?height=600&width=1000&text=Village+Gardens",
+    "/placeholder.svg?height=600&width=1000&text=Village+Community",
   ],
   quickFacts: {
     type: "Independent Villas",
-    location: "Sector 114, Gurgaon",
+    location: "Sector 14, Sohna Road, Gurgaon",
     area: "3500 – 8000 SQ.FT",
-    price: "₹8.5 Cr - ₹18.5 Cr",
+    price: "₹8.5 Cr - ₹18.2 Cr",
     accommodation: "4 & 5 BHK Villas",
     status: "Under Construction",
     possession: "Dec 2025",
-    rating: 4.9,
+    rating: 4.8,
   },
   description: [
-    "IREO The Village represents the pinnacle of luxury villa living in Gurgaon. These independent villas offer spacious layouts, private gardens, and exclusive amenities in a gated community setting.",
-    "Located in the rapidly developing Sector 114, The Village provides a perfect blend of modern luxury and natural tranquility. Each villa is designed with contemporary architecture, premium finishes, and smart home features.",
-    "The development features a private clubhouse, landscaped gardens, recreational facilities, and 24/7 security. With possession scheduled for December 2025, residents can look forward to an unparalleled villa living experience.",
+    "IREO The Village presents an exclusive collection of independent luxury villas designed for those who seek privacy, space, and elegance. Set in a gated community, these villas offer the perfect blend of modern architecture and natural surroundings.",
+    "Each villa is thoughtfully designed with spacious layouts, private gardens, and premium finishes. The community features wide tree-lined streets, parks, and recreational facilities that create a village-like atmosphere within the city.",
+    "Located on Sohna Road, The Village provides excellent connectivity to major business districts while maintaining a peaceful residential environment. The project offers a lifestyle that combines luxury living with community spirit.",
   ],
   amenities: [
-    { name: "Private Clubhouse", icon: "🏛️", description: "Exclusive clubhouse for residents" },
+    { name: "Private Gardens", icon: "🌺", description: "Individual villa gardens" },
+    { name: "Community Club", icon: "🏛️", description: "Exclusive clubhouse facilities" },
     { name: "Swimming Pool", icon: "🏊", description: "Resort-style swimming pool" },
-    { name: "Fitness Center", icon: "💪", description: "Fully equipped gymnasium" },
     { name: "Tennis Court", icon: "🎾", description: "Professional tennis court" },
-    { name: "Kids Play Area", icon: "🎮", description: "Safe children's playground" },
-    { name: "Landscaped Gardens", icon: "🌳", description: "Beautiful community gardens" },
+    { name: "Kids Play Area", icon: "🎪", description: "Dedicated children's zone" },
+    { name: "Jogging Track", icon: "🏃", description: "Tree-lined jogging paths" },
     { name: "24/7 Security", icon: "🛡️", description: "Gated community security" },
     { name: "Power Backup", icon: "⚡", description: "100% power backup" },
-    { name: "Parking", icon: "🚗", description: "Covered parking spaces" },
-    { name: "Jogging Track", icon: "🏃", description: "Dedicated jogging track" },
-    { name: "Community Hall", icon: "🎉", description: "Multi-purpose hall" },
-    { name: "Spa & Wellness", icon: "🧘", description: "Wellness center" },
+    { name: "Landscaped Parks", icon: "🌳", description: "Beautiful community parks" },
+    { name: "Gym & Spa", icon: "💪", description: "Fitness and wellness center" },
+    { name: "Multi-purpose Hall", icon: "🎭", description: "Community event spaces" },
+    { name: "Covered Parking", icon: "🚗", description: "Private villa parking" },
   ],
   gallery: [
     "/placeholder.svg?height=300&width=400&text=Villa+Exterior",
@@ -50,24 +50,24 @@ const projectData = {
     "/placeholder.svg?height=300&width=400&text=Villa+Master+Bedroom",
     "/placeholder.svg?height=300&width=400&text=Villa+Kitchen",
     "/placeholder.svg?height=300&width=400&text=Private+Garden",
+    "/placeholder.svg?height=300&width=400&text=Community+Pool",
     "/placeholder.svg?height=300&width=400&text=Clubhouse",
-    "/placeholder.svg?height=300&width=400&text=Swimming+Pool",
-    "/placeholder.svg?height=300&width=400&text=Community+Gardens",
+    "/placeholder.svg?height=300&width=400&text=Village+Streets",
   ],
   locationHighlights: {
     description:
-      "Sector 114, Gurgaon is an emerging residential hub with excellent connectivity and infrastructure. The Village offers a peaceful environment while maintaining easy access to major business districts.",
+      "Strategically located on Sohna Road, IREO The Village offers excellent connectivity to major business hubs while providing a serene residential environment away from the city's hustle and bustle.",
     benefits: [
-      "10 minutes to Dwarka Expressway",
+      "10 minutes to Golf Course Road",
       "15 minutes to Cyber City",
       "20 minutes to IGI Airport",
-      "Close to upcoming Metro Station",
-      "Top schools in vicinity",
-      "Premium healthcare facilities",
+      "5 minutes to Sohna Road Metro",
+      "Top schools and hospitals nearby",
+      "Easy access to NH-8",
     ],
     images: [
       "/placeholder.svg?height=250&width=350&text=Village+Location+Map",
-      "/placeholder.svg?height=250&width=350&text=Connectivity+Map",
+      "/placeholder.svg?height=250&width=350&text=Sohna+Road+Connectivity",
     ],
   },
 }
@@ -210,18 +210,18 @@ export default function TheVillagePage() {
       </section>
 
       {/* Quick Facts Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-green-900 to-emerald-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100&text=Pattern')] opacity-10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Quick Facts</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto"></div>
+            <div className="w-32 h-1 bg-gradient-to-r from-green-400 to-emerald-400 mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <CardContent className="p-6 text-center">
-                <Home className="h-12 w-12 mx-auto mb-4 text-blue-300" />
+                <Home className="h-12 w-12 mx-auto mb-4 text-green-300" />
                 <h3 className="font-semibold mb-2">Property Type</h3>
                 <p className="text-sm text-gray-300">{projectData.quickFacts.type}</p>
               </CardContent>
@@ -229,7 +229,7 @@ export default function TheVillagePage() {
 
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <CardContent className="p-6 text-center">
-                <MapPin className="h-12 w-12 mx-auto mb-4 text-green-300" />
+                <MapPin className="h-12 w-12 mx-auto mb-4 text-blue-300" />
                 <h3 className="font-semibold mb-2">Location</h3>
                 <p className="text-sm text-gray-300">{projectData.quickFacts.location}</p>
               </CardContent>
@@ -275,7 +275,7 @@ export default function TheVillagePage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{projectData.name}</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            <div className="w-32 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto"></div>
           </div>
 
           <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8">
@@ -289,14 +289,14 @@ export default function TheVillagePage() {
       </section>
 
       {/* Amenities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-100">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-emerald-100">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Villa Amenities</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Village Amenities</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Experience luxury villa living with exclusive amenities and services.
+              Enjoy resort-style amenities and community facilities in your private villa community.
             </p>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            <div className="w-32 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -309,7 +309,7 @@ export default function TheVillagePage() {
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                     {amenity.icon}
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                  <h3 className="font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">
                     {amenity.name}
                   </h3>
                   <p className="text-sm text-gray-600">{amenity.description}</p>
@@ -324,11 +324,11 @@ export default function TheVillagePage() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Villa Gallery</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Village Gallery</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Explore the luxury and elegance of IREO The Village villas.
+              Discover the beauty and elegance of independent villa living at IREO The Village.
             </p>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            <div className="w-32 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -350,11 +350,11 @@ export default function TheVillagePage() {
       </section>
 
       {/* Location Highlights */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-green-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Prime Location</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            <div className="w-32 h-1 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto"></div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -388,26 +388,26 @@ export default function TheVillagePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 via-green-900 to-emerald-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100&text=Pattern')] opacity-10"></div>
         <div className="relative max-w-5xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">Your Dream Villa Awaits</h2>
           <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-            Experience the ultimate in luxury villa living. Book your site visit today!
+            Experience independent villa living in a gated community. Book your site visit today!
           </p>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 px-4 py-2">RERA Approved</Badge>
+            <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 px-4 py-2">Gated Community</Badge>
             <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 px-4 py-2">
               Independent Villas
             </Badge>
-            <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 px-4 py-2">Gated Community</Badge>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 text-lg font-semibold"
+              className="bg-gradient-to-r from-green-600 to-emerald-700 hover:from-green-700 hover:to-emerald-800 px-8 py-4 text-lg font-semibold"
             >
               <Phone className="h-6 w-6 mr-3" />
               Call 9811750130
@@ -434,7 +434,7 @@ export default function TheVillagePage() {
                 className="h-10 mb-4"
               />
               <p className="text-gray-400">
-                Experience luxury villa living at IREO The Village with independent villas and premium amenities.
+                Experience independent villa living at IREO The Village with premium amenities and community facilities.
               </p>
             </div>
             <div>
@@ -442,7 +442,7 @@ export default function TheVillagePage() {
               <div className="space-y-2 text-gray-400">
                 <p>📞 9811750130</p>
                 <p>📧 info@ireo.in</p>
-                <p>📍 Sector 114, Gurgaon</p>
+                <p>📍 Sector 14, Sohna Road, Gurgaon</p>
               </div>
             </div>
             <div>
