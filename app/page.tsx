@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import HomePage from "./clientpage"
+import HomePage from "./home-page"
 
 export const metadata: Metadata = {
   title: "IREO Projects - Premium Real Estate Developer in Gurgaon",

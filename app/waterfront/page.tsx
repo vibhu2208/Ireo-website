@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import WaterfrontClientPage from "./WaterfrontClientPage"
+import WaterfrontPage from "./waterfront-page"
 
 export const metadata: Metadata = {
   title: "IREO Waterfront - Luxury Waterfront Residences in Sector 58 Gurgaon",
@@ -26,5 +26,5 @@ export const metadata: Metadata = {
 }
 
 export default function Page() {
-  return <WaterfrontClientPage />
+  return <WaterfrontPage />
 }

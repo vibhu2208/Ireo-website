@@ -1,50 +1,51 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
+import { Inter } from "next/font/google"
 import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
+import Navigation from "@/components/navigation"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: {
-    default: "IREO Projects - Premium Real Estate in Gurgaon",
+    default: "IREO Projects - Premium Real Estate Developer in Gurgaon",
     template: "%s | IREO Projects",
   },
   description:
     "Discover luxury residential and commercial properties by IREO in Gurgaon. Premium apartments, villas, and commercial spaces with world-class amenities.",
-  keywords:
-    "IREO, Gurgaon real estate, luxury apartments, premium villas, commercial spaces, Sector 58, Sector 66, Sohna Road",
-  authors: [{ name: "IREO Projects" }],
-  creator: "IREO Projects",
-  publisher: "IREO Projects",
+  keywords: "IREO projects, Gurgaon real estate, luxury apartments, premium villas, commercial spaces",
+  authors: [{ name: "IREO" }],
+  creator: "IREO",
+  publisher: "IREO",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://ireo-projects.com"),
+  metadataBase: new URL("https://ireo-projects.vercel.app"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ireo-projects.com",
-    title: "IREO Projects - Premium Real Estate in Gurgaon",
-    description:
-      "Discover luxury residential and commercial properties by IREO in Gurgaon. Premium apartments, villas, and commercial spaces with world-class amenities.",
+    url: "/",
     siteName: "IREO Projects",
+    title: "IREO Projects - Premium Real Estate Developer in Gurgaon",
+    description: "Discover luxury residential and commercial properties by IREO in Gurgaon.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "IREO Projects - Luxury Real Estate in Gurgaon",
+        alt: "IREO Projects - Premium Real Estate Portfolio in Gurgaon",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "IREO Projects - Premium Real Estate in Gurgaon",
+    title: "IREO Projects - Premium Real Estate Developer in Gurgaon",
     description: "Discover luxury residential and commercial properties by IREO in Gurgaon.",
     images: ["/og-image.jpg"],
   },
@@ -67,26 +68,26 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#1e40af" />
         <style>{`
-html {
-  font-family: ${GeistSans.style.fontFamily};
-  --font-sans: ${GeistSans.variable};
-  --font-mono: ${GeistMono.variable};
-}
+          html { scroll-behavior: smooth; }
+          body { overflow-x: hidden; }
         `}</style>
       </head>
-      <body>{children}</body>
+      <body className={inter.className} suppressHydrationWarning>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+          <Navigation />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
