@@ -9,12 +9,12 @@ import { Card, CardContent } from "@/components/ui/card"
 const projectData = {
   name: "IREO Uptown",
   slug: "uptown",
-  heroImages: [
-    "/placeholder.svg?height=600&width=1000&text=Uptown+Villa+Exterior",
-    "/placeholder.svg?height=600&width=1000&text=Uptown+Villa+Garden",
-    "/placeholder.svg?height=600&width=1000&text=Uptown+Villa+Interior",
-    "/placeholder.svg?height=600&width=1000&text=Uptown+Villa+Pool",
-  ],
+     heroImages: [
+     "/skyon-gallery-01.webp",
+     "/skyon-gallery-02.webp",
+     "/skyon-gallery-03.webp",
+     "/skyon-gallery-04.webp",
+   ],
   quickFacts: {
     type: "Luxury Villas",
     location: "Sector 66, Gurgaon",
@@ -26,34 +26,31 @@ const projectData = {
     rating: 4.9,
   },
   description: [
-    "IREO Uptown represents the epitome of luxury villa living in Gurgaon. These magnificent independent villas are designed for those who appreciate the finer things in life, offering expansive spaces, private gardens, and unparalleled privacy in a gated community setting.",
-    "Each villa at Uptown is a masterpiece of contemporary architecture, featuring spacious layouts, premium finishes, and private amenities. The development is strategically located in Sector 66, providing excellent connectivity while maintaining the tranquility of suburban living.",
-    "The community offers exclusive amenities including a private clubhouse, swimming pool, landscaped gardens, and 24/7 security. With only 180 carefully planned villas, Uptown ensures an intimate and exclusive living experience for its residents.",
+    "Ireo Uptown, in Sector 66, Gurgaon, is spread across 10.96 acres with residential apartments devoted to your aspirations. Each apartment here is a pool of fresh ideas moulded into living spaces. When you step out of your home, you’ll feel its pulse - in recreational hubs, green expanses and high-tech facilities designed around you. Browse through this website and you'll agree. Much thought has gone into making your home.",
+    
   ],
-  amenities: [
-    { name: "Private Pool", icon: "🏊", description: "Individual villa pools" },
-    { name: "Private Garden", icon: "🌳", description: "Landscaped private gardens" },
-    { name: "Clubhouse", icon: "🏛️", description: "Exclusive community clubhouse" },
-    { name: "Fitness Center", icon: "💪", description: "State-of-the-art gym" },
-    { name: "Tennis Court", icon: "🎾", description: "Professional tennis court" },
-    { name: "Kids Play Area", icon: "🎮", description: "Dedicated children's zone" },
-    { name: "24/7 Security", icon: "🛡️", description: "Gated community security" },
-    { name: "Concierge", icon: "🎩", description: "Personal concierge services" },
-    { name: "Spa & Wellness", icon: "🧘", description: "Luxury spa facilities" },
-    { name: "Business Center", icon: "💼", description: "Modern business facilities" },
-    { name: "Banquet Hall", icon: "🎉", description: "Private event spaces" },
-    { name: "Valet Parking", icon: "🚗", description: "Valet parking services" },
-  ],
-  gallery: [
-    "/placeholder.svg?height=300&width=400&text=Villa+Living+Room",
-    "/placeholder.svg?height=300&width=400&text=Villa+Master+Suite",
-    "/placeholder.svg?height=300&width=400&text=Villa+Kitchen",
-    "/placeholder.svg?height=300&width=400&text=Villa+Garden+View",
-    "/placeholder.svg?height=300&width=400&text=Villa+Pool+Area",
-    "/placeholder.svg?height=300&width=400&text=Villa+Dining",
-    "/placeholder.svg?height=300&width=400&text=Community+Club",
-    "/placeholder.svg?height=300&width=400&text=Villa+Exterior",
-  ],
+     amenities: [
+     { name: "Club House", icon: "🏛️", description: "Exclusive community clubhouse" },
+     { name: "Meditation Centre", icon: "🧘", description: "Peaceful meditation and wellness space" },
+     { name: "Sports Facility", icon: "⚽", description: "Multi-sport facilities for residents" },
+     { name: "Kids Play Area", icon: "🎮", description: "Dedicated children's play zone" },
+     { name: "Swimming Pool", icon: "🏊", description: "Refreshing swimming pool" },
+     { name: "Gymnasium", icon: "💪", description: "State-of-the-art fitness center" },
+     { name: "Parks", icon: "🌳", description: "Beautiful landscaped parks" },
+     { name: "Power Backup", icon: "⚡", description: "24/7 uninterrupted power supply" },
+     { name: "24x7 Water Supply", icon: "💧", description: "Round-the-clock water availability" },
+     { name: "Covered Parking", icon: "🚗", description: "Secure covered parking spaces" },
+     { name: "Open Spaces", icon: "🌿", description: "Extensive open green spaces" },
+     { name: "3 Tier Security", icon: "🛡️", description: "Multi-level security system" },
+   ],
+     gallery: [
+     "/skyon-gallery-01.webp",
+     "/skyon-gallery-02.webp",
+     "/skyon-gallery-03.webp",
+     "/skyon-gallery-04.webp",
+     "/skyon-gallery-05.webp",
+     "/skyon-gallery-06.webp",
+   ],
   locationHighlights: {
     description:
       "Sector 66, Gurgaon is a premium residential area known for its upscale developments and excellent infrastructure. The location offers the perfect balance of urban connectivity and peaceful suburban living.",
@@ -65,10 +62,9 @@ const projectData = {
       "Premium schools nearby",
       "World-class healthcare facilities",
     ],
-    images: [
-      "/placeholder.svg?height=250&width=350&text=Sector+66+Location",
-      "/placeholder.svg?height=250&width=350&text=Villa+Community+View",
-    ],
+         images: [
+       "/location-map-upptown.webp",
+     ],
   },
 }
 
@@ -288,6 +284,134 @@ export default function UptownPage() {
         </div>
       </section>
 
+      {/* Pricing Table Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Pricing & Availability</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Explore our range of luxury villas with transparent pricing and flexible payment options.
+            </p>
+            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+          </div>
+
+          {/* Desktop Table */}
+          <div className="hidden lg:block">
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                <div className="grid grid-cols-5 gap-4 p-6">
+                  <div className="font-bold text-lg">Typology</div>
+                  <div className="font-bold text-lg">Block</div>
+                  <div className="font-bold text-lg">Size (SQ.FT)</div>
+                  <div className="font-bold text-lg">Resale Price</div>
+                  <div className="font-bold text-lg">Rental</div>
+                </div>
+              </div>
+              
+              <div className="divide-y divide-gray-200">
+                <div className="grid grid-cols-5 gap-4 p-6 hover:bg-blue-50 transition-colors duration-200">
+                  <div className="font-semibold text-gray-900">2 BHK + SQ</div>
+                  <div className="text-gray-700">Apartments</div>
+                  <div className="text-gray-700">1450</div>
+                  <div className="text-blue-600 font-semibold">₹ 8,200/- SQ.FT</div>
+                  <div className="text-blue-600 font-semibold">Coming Soon</div>
+                </div>
+                
+                <div className="grid grid-cols-5 gap-4 p-6 hover:bg-blue-50 transition-colors duration-200">
+                  <div className="font-semibold text-gray-900">3 BHK + SQ</div>
+                  <div className="text-gray-700">Apartments</div>
+                  <div className="text-gray-700">1670 – 1837</div>
+                  <div className="text-blue-600 font-semibold">₹ 8,000/- SQ.FT</div>
+                  <div className="text-blue-600 font-semibold">Coming Soon</div>
+                </div>
+                
+                <div className="grid grid-cols-5 gap-4 p-6 hover:bg-blue-50 transition-colors duration-200">
+                  <div className="font-semibold text-gray-900">4 BHK + SQ</div>
+                  <div className="text-gray-700">Apartments</div>
+                  <div className="text-gray-700">2027</div>
+                  <div className="text-blue-600 font-semibold">₹ 8,000/- SQ.FT</div>
+                  <div className="text-blue-600 font-semibold">Coming Soon</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Cards */}
+          <div className="lg:hidden space-y-6">
+            <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-gray-900">2 BHK + SQ</h3>
+                <p className="text-blue-600 font-semibold">Apartments</p>
+              </div>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-gray-600">Size (SQ.FT):</span>
+                  <span className="font-semibold text-gray-900">1450</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-gray-600">Resale Price:</span>
+                  <span className="text-blue-600 font-semibold">₹ 8,200/- SQ.FT</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-600">Rental:</span>
+                  <span className="text-blue-600 font-semibold">Coming Soon</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-gray-900">3 BHK + SQ</h3>
+                <p className="text-blue-600 font-semibold">Apartments</p>
+              </div>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-gray-600">Size (SQ.FT):</span>
+                  <span className="font-semibold text-gray-900">1670 – 1837</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-gray-600">Resale Price:</span>
+                  <span className="text-blue-600 font-semibold">₹ 8,000/- SQ.FT</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-600">Rental:</span>
+                  <span className="text-blue-600 font-semibold">Coming Soon</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+              <div className="text-center mb-4">
+                <h3 className="text-xl font-bold text-gray-900">4 BHK + SQ</h3>
+                <p className="text-blue-600 font-semibold">Apartments</p>
+              </div>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-gray-600">Size (SQ.FT):</span>
+                  <span className="font-semibold text-gray-900">2027</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-gray-600">Resale Price:</span>
+                  <span className="text-blue-600 font-semibold">₹ 8,000/- SQ.FT</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-gray-600">Rental:</span>
+                  <span className="text-blue-600 font-semibold">Coming Soon</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center mt-12">
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 text-lg font-semibold">
+              <Phone className="h-5 w-5 mr-2" />
+              Get Detailed Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Amenities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-7xl mx-auto">
@@ -320,36 +444,194 @@ export default function UptownPage() {
         </div>
       </section>
 
-      {/* Image Gallery */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Villa Gallery</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Discover the luxurious interiors and beautiful exteriors of our premium villas.
-            </p>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
-          </div>
+             {/* Image Gallery */}
+       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+         <div className="max-w-7xl mx-auto">
+           <div className="text-center mb-16">
+             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Villa Gallery</h2>
+             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+               Discover the luxurious interiors and beautiful exteriors of our premium villas.
+             </p>
+             <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {projectData.gallery.map((image, index) => (
-              <div
-                key={index}
-                className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+             {projectData.gallery.map((image, index) => (
+               <div
+                 key={index}
+                 className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
+               >
+                 <img
+                   src={image || "/placeholder.svg"}
+                   alt={`Gallery ${index + 1}`}
+                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+               </div>
+             ))}
+           </div>
+         </div>
+       </section>
+
+       {/* Floor Plan Section */}
+       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
+         <div className="max-w-7xl mx-auto">
+           <div className="text-center mb-16">
+             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Floor Plans</h2>
+             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+               Explore our thoughtfully designed floor plans that maximize space utilization and create the perfect living environment for your family.
+             </p>
+             <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+           </div>
+
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+               <div className="aspect-[4/3] relative">
+                 <img
+                   src="/uptown-floor-plan-01.webp"
+                   alt="Uptown Floor Plan 1"
+                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                     <svg
+                       className="w-6 h-6 text-white"
+                       fill="none"
+                       stroke="currentColor"
+                       viewBox="0 0 24 24"
+                     >
+                       <path
+                         strokeLinecap="round"
+                         strokeLinejoin="round"
+                         strokeWidth={2}
+                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                       />
+                     </svg>
+                   </div>
+                 </div>
+               </div>
+               <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                 <h3 className="text-white font-semibold text-sm">Villa Floor Plan 1</h3>
+               </div>
+             </div>
+
+             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+               <div className="aspect-[4/3] relative">
+                 <img
+                   src="/uptown-floor-plan-02.webp"
+                   alt="Uptown Floor Plan 2"
+                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                     <svg
+                       className="w-6 h-6 text-white"
+                       fill="none"
+                       stroke="currentColor"
+                       viewBox="0 0 24 24"
+                     >
+                       <path
+                         strokeLinecap="round"
+                         strokeLinejoin="round"
+                         strokeWidth={2}
+                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                       />
+                     </svg>
+                   </div>
+                 </div>
+               </div>
+               <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                 <h3 className="text-white font-semibold text-sm">Villa Floor Plan 2</h3>
+               </div>
+             </div>
+
+             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+               <div className="aspect-[4/3] relative">
+                 <img
+                   src="/uptown-floor-plan-03.webp"
+                   alt="Uptown Floor Plan 3"
+                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                     <svg
+                       className="w-6 h-6 text-white"
+                       fill="none"
+                       stroke="currentColor"
+                       viewBox="0 0 24 24"
+                     >
+                       <path
+                         strokeLinecap="round"
+                         strokeLinejoin="round"
+                         strokeWidth={2}
+                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                       />
+                     </svg>
+                   </div>
+                 </div>
+               </div>
+               <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                 <h3 className="text-white font-semibold text-sm">Villa Floor Plan 3</h3>
+               </div>
+             </div>
+
+             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+               <div className="aspect-[4/3] relative">
+                 <img
+                   src="/uptown-floor-plan-04.webp"
+                   alt="Uptown Floor Plan 4"
+                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                     <svg
+                       className="w-6 h-6 text-white"
+                       fill="none"
+                       stroke="currentColor"
+                       viewBox="0 0 24 24"
+                     >
+                       <path
+                         strokeLinecap="round"
+                         strokeLinejoin="round"
+                         strokeWidth={2}
+                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                       />
+                     </svg>
+                   </div>
+                 </div>
+               </div>
+               <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                 <h3 className="text-white font-semibold text-sm">Villa Floor Plan 4</h3>
+               </div>
+             </div>
+           </div>
+
+                       {/* Floor Plan CTA */}
+            <div className="text-center mt-12">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 text-lg font-semibold"
+                onClick={() => {
+                  // Create a link to download the floor plans
+                  const link = document.createElement('a');
+                  link.href = '/uptown-floor-plan-01.webp';
+                  link.download = 'Uptown-Floor-Plans.zip';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
               >
-                <img
-                  src={image || "/placeholder.svg"}
-                  alt={`Gallery ${index + 1}`}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                Download Floor Plans
+              </Button>
+            </div>
+         </div>
+       </section>
 
-      {/* Location Highlights */}
+       {/* Location Highlights */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -357,37 +639,116 @@ export default function UptownPage() {
             <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">{projectData.locationHighlights.description}</p>
+                     <div className="grid lg:grid-cols-2 gap-16 items-center">
+             <div>
+               <p className="text-lg text-gray-700 leading-relaxed mb-8">{projectData.locationHighlights.description}</p>
 
-              <div className="grid grid-cols-1 gap-4">
-                {projectData.locationHighlights.benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700 font-medium">{benefit}</span>
-                  </div>
-                ))}
-              </div>
+               <div className="grid grid-cols-1 gap-4">
+                 {projectData.locationHighlights.benefits.map((benefit, index) => (
+                   <div key={index} className="flex items-center space-x-3">
+                     <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
+                     <span className="text-gray-700 font-medium">{benefit}</span>
+                   </div>
+                 ))}
+               </div>
+             </div>
+
+             <div className="relative overflow-hidden rounded-2xl shadow-xl">
+               <img
+                 src={projectData.locationHighlights.images[0]}
+                 alt="Uptown Location Map"
+                 className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
+               />
+               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+             </div>
+           </div>
+                 </div>
+       </section>
+
+       {/* Master Plan Section */}
+       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+         <div className="max-w-7xl mx-auto">
+           <div className="text-center mb-16">
+             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Master Plan</h2>
+             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+               Discover the comprehensive master plan of IREO Uptown, showcasing the strategic layout and world-class infrastructure that makes Uptown the perfect place to call home.
+             </p>
+             <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+           </div>
+
+           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+             <div>
+               <h3 className="text-2xl font-bold text-gray-900 mb-6">Premium Villa Community</h3>
+               <div className="space-y-4 text-gray-700">
+                 <div className="flex items-start space-x-3">
+                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                   <p>Strategic location in Sector 66 with excellent connectivity to major business hubs</p>
+                 </div>
+                 <div className="flex items-start space-x-3">
+                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                   <p>Exclusive gated community with only 180 carefully planned luxury villas</p>
+                 </div>
+                 <div className="flex items-start space-x-3">
+                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                   <p>Extensive open spaces and landscaped gardens throughout the development</p>
+                 </div>
+                 <div className="flex items-start space-x-3">
+                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                   <p>World-class amenities and infrastructure designed for luxury living</p>
+                 </div>
+                 <div className="flex items-start space-x-3">
+                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                   <p>Seamless connectivity to major business hubs and lifestyle destinations</p>
+                 </div>
+               </div>
+             </div>
+
+             <div className="relative">
+               <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+                 <img
+                   src="/uptown-master-plan.webp"
+                   alt="Uptown Master Plan"
+                   className="w-full h-auto object-cover"
+                 />
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                   <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
+                     <svg
+                       className="w-8 h-8 text-white"
+                       fill="none"
+                       stroke="currentColor"
+                       viewBox="0 0 24 24"
+                     >
+                       <path
+                         strokeLinecap="round"
+                         strokeLinejoin="round"
+                         strokeWidth={2}
+                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                       />
+                     </svg>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+                       {/* Master Plan CTA */}
+            <div className="text-center mt-12">
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 text-lg font-semibold"
+                onClick={() => {
+                  // Open master plan in a new tab
+                  window.open('/uptown-master-plan.webp', '_blank');
+                }}
+              >
+                View Full Master Plan
+              </Button>
             </div>
+         </div>
+       </section>
 
-            <div className="grid grid-cols-1 gap-6">
-              {projectData.locationHighlights.images.map((image, index) => (
-                <div key={index} className="relative overflow-hidden rounded-2xl shadow-xl">
-                  <img
-                    src={image || "/placeholder.svg"}
-                    alt={`Location ${index + 1}`}
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
+       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100&text=Pattern')] opacity-10"></div>
         <div className="relative max-w-5xl mx-auto text-center">

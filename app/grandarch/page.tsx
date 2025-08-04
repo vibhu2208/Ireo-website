@@ -1,62 +1,79 @@
-"use client"
-
-import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight, Phone, MapPin, Home, Users, Calendar, Star, CheckCircle, Award } from "lucide-react"
+import type { Metadata } from "next"
+import { Phone, MapPin, Home, Users, Calendar, Star, CheckCircle, Award, Building } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
+import { StructuredData } from "@/components/structured-data"
+
+export const metadata: Metadata = {
+  title: "IREO Grand Arch - Premium Apartments in Sector 58, Gurgaon",
+  description: "Discover IREO Grand Arch - Premium 3 & 4 BHK apartments in Sector 58, Gurgaon. Ready to move with luxury amenities, swimming pool, fitness center & more. Starting ₹2.8 Cr.",
+  keywords: "IREO Grand Arch, Sector 58 Gurgaon, premium apartments, 3 BHK, 4 BHK, ready to move, luxury amenities",
+  alternates: {
+    canonical: "/grandarch",
+  },
+  openGraph: {
+    title: "IREO Grand Arch - Premium Apartments in Sector 58, Gurgaon",
+    description: "Discover IREO Grand Arch - Premium 3 & 4 BHK apartments in Sector 58, Gurgaon. Ready to move with luxury amenities.",
+    url: "/grandarch",
+    images: [
+      {
+        url: "/placeholder.svg?height=600&width=1000&text=Grand+Arch+Exterior",
+        width: 1200,
+        height: 630,
+        alt: "IREO Grand Arch - Premium Apartments in Gurgaon",
+      },
+    ],
+  },
+}
 
 const projectData = {
   name: "IREO The Grand Arch",
   slug: "grandarch",
   heroImages: [
-    "/placeholder.svg?height=600&width=1000&text=Grand+Arch+Exterior",
+    "/grandarch-gallery-01.webp",
     "/placeholder.svg?height=600&width=1000&text=Grand+Arch+Lobby",
     "/placeholder.svg?height=600&width=1000&text=Grand+Arch+Amenities",
     "/placeholder.svg?height=600&width=1000&text=Grand+Arch+Interior",
   ],
   quickFacts: {
-    type: "Premium Residences",
-    location: "Sector 67, Gurgaon",
-    area: "1650 – 4200 SQ.FT",
-    price: "₹3.2 Cr - ₹8.5 Cr",
-    accommodation: "3 & 4 BHK",
+    type: "Residential Apartments",
+    location: "Sector 58, Gurgaon",
+    area: "1375 - 2864 SQ.FT",
+    price: "₹Call for Price",
+    accommodation: "2,3 & 4 BHK",
     status: "Ready to Move",
     possession: "Ready",
     rating: 4.7,
   },
   description: [
-    "IREO The Grand Arch stands as a testament to architectural excellence and luxury living in the heart of Gurgaon. This premium residential development offers spacious homes with contemporary design and world-class amenities for the modern family.",
-    "Located in the prestigious Sector 67, the project provides excellent connectivity to major business districts and lifestyle destinations. Each residence features premium finishes, modern fixtures, and thoughtfully designed spaces that maximize comfort and functionality.",
-    "The development boasts an impressive array of amenities including a state-of-the-art clubhouse, swimming pool, fitness center, and beautifully landscaped gardens. With ready-to-move-in status, residents can immediately enjoy the luxury lifestyle that Grand Arch offers.",
+    "IREO Grand Arch, is part of a 700+ acre township called the IREO City, located at the Golf Course Road Extension on 60 meter wide sector road, in Sector-58. The construction is being done by L&T and follow the Shear Wall Construction concept. The Shear Wall Construction method ensures a completely brick less structure, and hence delivering a quality finish and a seepage free product for the lifetime. A lot of thought has gone into planning The Grand Arch. Unlike most developments, The Grand Arch has a very Multi-dimensional feel to it, as the towers are well placed, and of different heights (4 Towers of G+7, 4 Towers of G+29 and 1 Tower of G+22). Also, there are plenty of open spaces & landscaped gardens, giving each resident a sense of space & freedom."
   ],
   amenities: [
-    { name: "Swimming Pool", icon: "🏊", description: "Resort-style swimming pool" },
-    { name: "Fitness Center", icon: "💪", description: "Modern gym with latest equipment" },
-    { name: "Clubhouse", icon: "🏛️", description: "Premium clubhouse facilities" },
-    { name: "Landscaped Gardens", icon: "🌳", description: "Beautifully maintained gardens" },
-    { name: "Kids Play Area", icon: "🎮", description: "Safe children's play zone" },
-    { name: "Sports Facilities", icon: "🏸", description: "Badminton and tennis courts" },
-    { name: "24/7 Security", icon: "🛡️", description: "Advanced security systems" },
-    { name: "Power Backup", icon: "⚡", description: "100% power backup" },
-    { name: "Parking", icon: "🚗", description: "Ample covered parking" },
-    { name: "Maintenance", icon: "🔧", description: "Professional maintenance services" },
-    { name: "Community Hall", icon: "🎭", description: "Multi-purpose community space" },
-    { name: "Jogging Track", icon: "🏃", description: "Dedicated jogging path" },
+    { name: "Club House", icon: "🏛️", description: "Exclusive residents' club with premium facilities", category: "social" },
+    { name: "Meditation Centre", icon: "🧘", description: "Peaceful meditation and wellness center", category: "wellness" },
+    { name: "Sports Facility", icon: "⚽", description: "Multi-sport facilities for active living", category: "fitness" },
+    { name: "Kids Play Area", icon: "🎮", description: "Safe and fun play zone for children", category: "family" },
+    { name: "Swimming Pool", icon: "🏊", description: "Olympic-size infinity pool", category: "leisure" },
+    { name: "Gymnasium", icon: "💪", description: "Fully equipped modern fitness center", category: "fitness" },
+    { name: "Parks", icon: "🌳", description: "Beautiful landscaped green spaces", category: "outdoor" },
+    { name: "Power Backup", icon: "⚡", description: "24/7 uninterrupted power supply", category: "utility" },
+    { name: "24x7 Water Supply", icon: "💧", description: "Round-the-clock water availability", category: "utility" },
+    { name: "Covered Parking", icon: "🚗", description: "Secure covered parking spaces", category: "parking" },
+    { name: "Open Spaces", icon: "🌿", description: "Spacious open areas for recreation", category: "outdoor" },
+    { name: "3 Tier Security", icon: "🛡️", description: "Multi-level security system", category: "security" },
   ],
   gallery: [
-    "/placeholder.svg?height=300&width=400&text=Grand+Arch+Living",
-    "/placeholder.svg?height=300&width=400&text=Grand+Arch+Bedroom",
-    "/placeholder.svg?height=300&width=400&text=Grand+Arch+Kitchen",
-    "/placeholder.svg?height=300&width=400&text=Grand+Arch+Balcony",
-    "/placeholder.svg?height=300&width=400&text=Grand+Arch+Bathroom",
-    "/placeholder.svg?height=300&width=400&text=Grand+Arch+Dining",
-    "/placeholder.svg?height=300&width=400&text=Grand+Arch+Pool",
-    "/placeholder.svg?height=300&width=400&text=Grand+Arch+Club",
+    "/grandarch-gallery-01.webp",
+    "/grandarch-gallery-02.webp",
+    "/grandarch-gallery-03.webp",
+    "/grandarch-gallery-04.webp",
+    "/grandarch-gallery-05.webp",
+    "/grandarch-gallery-06.webp",
   ],
   locationHighlights: {
     description:
-      "Sector 67, Gurgaon offers the perfect blend of urban convenience and peaceful living. The location provides seamless connectivity to major business hubs while maintaining a serene residential environment.",
+      "Sector 58, Gurgaon offers the perfect blend of urban convenience and peaceful living. The location provides seamless connectivity to major business hubs while maintaining a serene residential environment.",
     benefits: [
       "3 minutes to Sohna Road",
       "8 minutes to Golf Course Road",
@@ -66,383 +83,660 @@ const projectData = {
       "Near healthcare facilities",
     ],
     images: [
-      "/placeholder.svg?height=250&width=350&text=Sector+67+Map",
-      "/placeholder.svg?height=250&width=350&text=Connectivity+View",
+      "/location-map-grandarch.webp",
     ],
   },
 }
 
 export default function GrandArchPage() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % projectData.heroImages.length)
-    }, 4000)
-    return () => clearInterval(timer)
-  }, [])
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % projectData.heroImages.length)
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + projectData.heroImages.length) % projectData.heroImages.length)
-  }
-
   return (
-    <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-white/95 backdrop-blur-lg shadow-lg border-b border-gray-100"
-            : "bg-white/90 backdrop-blur-sm"
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex-shrink-0">
-              <a href="/">
-                <img src="/placeholder.svg?height=40&width=120&text=IREO+Logo" alt="IREO Projects" className="h-10" />
-              </a>
-            </div>
-            <div className="flex items-center space-x-4">
-              <div className="hidden md:flex items-center space-x-2 text-gray-700">
-                <Phone className="h-5 w-5 text-blue-600" />
-                <span className="font-semibold">9811750130</span>
-              </div>
-              <Button
-                size="sm"
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800"
-              >
-                <Phone className="h-4 w-4 mr-2" />
-                Call Now
-              </Button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="relative h-screen overflow-hidden">
-        {projectData.heroImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-all duration-1000 ${
-              index === currentSlide ? "opacity-100 scale-100" : "opacity-0 scale-105"
-            }`}
-          >
-            <div className="w-full h-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${image})` }}>
-              <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70" />
-              <div className="relative h-full flex items-center justify-center text-center text-white px-4">
-                <div className="max-w-5xl">
-                  <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 px-4 py-2 text-sm font-semibold mb-6">
-                    {projectData.quickFacts.status}
-                  </Badge>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">{projectData.name}</h1>
-                  <p className="text-xl md:text-2xl mb-4 text-gray-200">{projectData.quickFacts.location}</p>
-                  <div className="flex items-center justify-center space-x-4 mb-8">
-                    <div className="flex items-center space-x-1">
-                      <Star className="h-5 w-5 text-yellow-400 fill-current" />
-                      <span className="text-lg font-semibold">{projectData.quickFacts.rating}</span>
-                    </div>
-                    <div className="text-gray-300">•</div>
-                    <div className="text-lg">{projectData.quickFacts.accommodation}</div>
-                    <div className="text-gray-300">•</div>
-                    <div className="text-lg">Possession: {projectData.quickFacts.possession}</div>
-                  </div>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button
-                      size="lg"
-                      className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 text-lg"
-                    >
-                      <Phone className="h-5 w-5 mr-2" />
-                      Call for Price
-                    </Button>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-2 border-white text-white hover:bg-white hover:text-gray-900 bg-transparent px-8 py-4 text-lg"
-                    >
-                      Schedule Site Visit
-                    </Button>
-                  </div>
+    <>
+      <StructuredData 
+        data={{
+          name: projectData.name,
+          description: projectData.description[0],
+          image: projectData.heroImages[0],
+          price: projectData.quickFacts.price,
+          area: projectData.quickFacts.area,
+          location: projectData.quickFacts.location,
+          type: projectData.quickFacts.type,
+          status: projectData.quickFacts.status,
+          url: "https://ireo-projects.vercel.app/grandarch"
+        }}
+        type="Apartment"
+      />
+      
+      <main className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="relative h-screen overflow-hidden">
+          <div className="w-full h-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${projectData.heroImages[0]})` }}>
+            <div className="absolute inset-0 bg-black/50" />
+            <div className="relative h-full flex items-center justify-center text-center text-white px-4">
+              <div className="max-w-4xl">
+                <h1 className="text-4xl md:text-6xl font-bold mb-4">{projectData.name}</h1>
+                <p className="text-xl md:text-2xl mb-6">{projectData.quickFacts.location}</p>
+                <p className="text-lg md:text-xl mb-8">{projectData.quickFacts.type}</p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                    <Phone className="h-5 w-5 mr-2" />
+                    Call 9811750130
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
+                    Schedule Site Visit
+                  </Button>
                 </div>
               </div>
             </div>
           </div>
-        ))}
+        </section>
 
-        <button
-          onClick={prevSlide}
-          className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-4 rounded-full transition-all duration-300 hover:scale-110"
-        >
-          <ChevronLeft className="h-6 w-6" />
-        </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-4 rounded-full transition-all duration-300 hover:scale-110"
-        >
-          <ChevronRight className="h-6 w-6" />
-        </button>
+        {/* Quick Facts Section */}
+        <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100&text=Pattern')] opacity-10"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Project Highlights</h2>
+              <div className="w-32 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto"></div>
+            </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
-          {projectData.heroImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                index === currentSlide ? "bg-white scale-125" : "bg-white/50 hover:bg-white/75"
-              }`}
-            />
-          ))}
-        </div>
-      </section>
-
-      {/* Quick Facts Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100&text=Pattern')] opacity-10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Quick Facts</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto"></div>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <Home className="h-12 w-12 mx-auto mb-4 text-blue-300" />
-                <h3 className="font-semibold mb-2">Property Type</h3>
-                <p className="text-sm text-gray-300">{projectData.quickFacts.type}</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <MapPin className="h-12 w-12 mx-auto mb-4 text-green-300" />
-                <h3 className="font-semibold mb-2">Location</h3>
-                <p className="text-sm text-gray-300">{projectData.quickFacts.location}</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <Users className="h-12 w-12 mx-auto mb-4 text-purple-300" />
-                <h3 className="font-semibold mb-2">Area</h3>
-                <p className="text-sm text-gray-300">{projectData.quickFacts.area}</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <Award className="h-12 w-12 mx-auto mb-4 text-yellow-300" />
-                <h3 className="font-semibold mb-2">Price</h3>
-                <p className="text-sm text-gray-300">{projectData.quickFacts.price}</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <Home className="h-12 w-12 mx-auto mb-4 text-orange-300" />
-                <h3 className="font-semibold mb-2">Accommodation</h3>
-                <p className="text-sm text-gray-300">{projectData.quickFacts.accommodation}</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <Calendar className="h-12 w-12 mx-auto mb-4 text-red-300" />
-                <h3 className="font-semibold mb-2">Status</h3>
-                <p className="text-sm text-gray-300">{projectData.quickFacts.status}</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Project Description */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{projectData.name}</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
-          </div>
-
-          <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed space-y-8">
-            {projectData.description.map((paragraph, index) => (
-              <p key={index} className="text-lg leading-relaxed">
-                {paragraph}
-              </p>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Amenities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Premium Amenities</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Enjoy a lifestyle of comfort and convenience with our thoughtfully designed amenities.
-            </p>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {projectData.amenities.map((amenity, index) => (
-              <Card
-                key={index}
-                className="group hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 bg-white border-0 shadow-lg"
-              >
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
                 <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {amenity.icon}
-                  </div>
-                  <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                    {amenity.name}
-                  </h3>
-                  <p className="text-sm text-gray-600">{amenity.description}</p>
+                  <Home className="h-12 w-12 mx-auto mb-4 text-blue-300" />
+                  <h3 className="font-semibold mb-2">Property Type</h3>
+                  <p className="text-sm text-gray-300">{projectData.quickFacts.type}</p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Image Gallery */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Image Gallery</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-              Explore the elegant interiors and premium spaces of Grand Arch.
-            </p>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
-          </div>
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <MapPin className="h-12 w-12 mx-auto mb-4 text-green-300" />
+                  <h3 className="font-semibold mb-2">Location</h3>
+                  <p className="text-sm text-gray-300">{projectData.quickFacts.location}</p>
+                </CardContent>
+              </Card>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {projectData.gallery.map((image, index) => (
-              <div
-                key={index}
-                className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
-              >
-                <img
-                  src={image || "/placeholder.svg"}
-                  alt={`Gallery ${index + 1}`}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <Users className="h-12 w-12 mx-auto mb-4 text-purple-300" />
+                  <h3 className="font-semibold mb-2">Area</h3>
+                  <p className="text-sm text-gray-300">{projectData.quickFacts.area}</p>
+                </CardContent>
+              </Card>
 
-      {/* Location Highlights */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Strategic Location</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
-          </div>
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <Award className="h-12 w-12 mx-auto mb-4 text-yellow-300" />
+                  <h3 className="font-semibold mb-2">Price</h3>
+                  <p className="text-sm text-gray-300">{projectData.quickFacts.price}</p>
+                </CardContent>
+              </Card>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">{projectData.locationHighlights.description}</p>
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <Building className="h-12 w-12 mx-auto mb-4 text-orange-300" />
+                  <h3 className="font-semibold mb-2">Accommodation</h3>
+                  <p className="text-sm text-gray-300">{projectData.quickFacts.accommodation}</p>
+                </CardContent>
+              </Card>
 
-              <div className="grid grid-cols-1 gap-4">
-                {projectData.locationHighlights.benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700 font-medium">{benefit}</span>
-                  </div>
-                ))}
-              </div>
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                <CardContent className="p-6 text-center">
+                  <Calendar className="h-12 w-12 mx-auto mb-4 text-red-300" />
+                  <h3 className="font-semibold mb-2">Status</h3>
+                  <p className="text-sm text-gray-300">{projectData.quickFacts.status}</p>
+                </CardContent>
+              </Card>
             </div>
+          </div>
+        </section>
 
-            <div className="grid grid-cols-1 gap-6">
-              {projectData.locationHighlights.images.map((image, index) => (
-                <div key={index} className="relative overflow-hidden rounded-2xl shadow-xl">
-                  <img
-                    src={image || "/placeholder.svg"}
-                    alt={`Location ${index + 1}`}
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                </div>
+        {/* Description Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">About {projectData.name}</h2>
+            <div className="prose prose-lg max-w-none text-gray-700">
+              {projectData.description.map((paragraph, index) => (
+                <p key={index} className="mb-6 leading-relaxed">
+                  {paragraph}
+                </p>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100&text=Pattern')] opacity-10"></div>
-        <div className="relative max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Experience Premium Living Today</h2>
-          <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-            Ready-to-move-in homes await you at Grand Arch. Schedule your visit today!
-          </p>
-
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 px-4 py-2">RERA Approved</Badge>
-            <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 px-4 py-2">Ready to Move</Badge>
-            <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 px-4 py-2">
-              Premium Location
-            </Badge>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 text-lg font-semibold"
-            >
-              <Phone className="h-6 w-6 mr-3" />
-              Call 9811750130
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 bg-transparent px-8 py-4 text-lg font-semibold"
-            >
-              Schedule Site Visit
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="mb-8">
-              <img
-                src="/placeholder.svg?height=50&width=150&text=IREO+Logo"
-                alt="IREO Projects"
-                className="h-12 mx-auto mb-6"
-              />
-              <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                Creating world-class residential and commercial spaces that redefine modern living in Gurgaon.
+        {/* Pricing Table Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-100">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Pricing & Availability</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Explore our range of premium residences designed for modern living with flexible payment options.
               </p>
+              <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
             </div>
-            <div className="border-t border-gray-800 pt-8">
-              <p className="text-gray-400">© 2025. All Rights Reserved. | IREO Projects | 9811750130</p>
+
+            {/* Desktop Table */}
+            <div className="hidden lg:block">
+              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+                <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                  <div className="grid grid-cols-5 gap-4 p-6">
+                    <div className="font-bold text-lg">Typology</div>
+                    <div className="font-bold text-lg">Type</div>
+                    <div className="font-bold text-lg">Unit Size</div>
+                    <div className="font-bold text-lg">Price (Per SQ.FT)</div>
+                    <div className="font-bold text-lg">Rental</div>
+                  </div>
+                </div>
+                
+                <div className="divide-y divide-gray-200">
+                  <div className="grid grid-cols-5 gap-4 p-6 hover:bg-blue-50 transition-colors duration-200">
+                    <div className="font-semibold text-gray-900">2 BHK + 2T</div>
+                    <div className="text-gray-700">Apartments</div>
+                    <div className="text-gray-700">1375 SQ.FT</div>
+                    <div className="text-blue-600 font-semibold">Call for Price</div>
+                    <div className="text-blue-600 font-semibold">Call for Rental</div>
+                  </div>
+                  
+                  <div className="grid grid-cols-5 gap-4 p-6 hover:bg-blue-50 transition-colors duration-200">
+                    <div className="font-semibold text-gray-900">2 BHK + 2T + SQ</div>
+                    <div className="text-gray-700">Duplex</div>
+                    <div className="text-gray-700">1632 SQ.FT</div>
+                    <div className="text-blue-600 font-semibold">Call for Price</div>
+                    <div className="text-blue-600 font-semibold">Call for Rental</div>
+                  </div>
+                  
+                  <div className="grid grid-cols-5 gap-4 p-6 hover:bg-blue-50 transition-colors duration-200">
+                    <div className="font-semibold text-gray-900">3 BHK + SQ</div>
+                    <div className="text-gray-700">Apartments</div>
+                    <div className="text-gray-700">2156 - 2896 SQ.FT</div>
+                    <div className="text-blue-600 font-semibold">Call for Price</div>
+                    <div className="text-blue-600 font-semibold">Call for Rental</div>
+                  </div>
+                  
+                  <div className="grid grid-cols-5 gap-4 p-6 hover:bg-blue-50 transition-colors duration-200">
+                    <div className="font-semibold text-gray-900">4 BHK + SQ</div>
+                    <div className="text-gray-700">Apartments</div>
+                    <div className="text-gray-700">2857 - 2864 SQ.FT</div>
+                    <div className="text-blue-600 font-semibold">Call for Price</div>
+                    <div className="text-blue-600 font-semibold">Call for Rental</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Cards */}
+            <div className="lg:hidden space-y-6">
+              <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-bold text-gray-900">2 BHK + 2T</h3>
+                  <p className="text-blue-600 font-semibold">Apartments</p>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600">Unit Size:</span>
+                    <span className="font-semibold text-gray-900">1375 SQ.FT</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600">Price (Per SQ.FT):</span>
+                    <span className="text-blue-600 font-semibold">Call for Price</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-600">Rental:</span>
+                    <span className="text-blue-600 font-semibold">Call for Rental</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-bold text-gray-900">2 BHK + 2T + SQ</h3>
+                  <p className="text-blue-600 font-semibold">Duplex</p>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600">Unit Size:</span>
+                    <span className="font-semibold text-gray-900">1632 SQ.FT</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600">Price (Per SQ.FT):</span>
+                    <span className="text-blue-600 font-semibold">Call for Price</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-600">Rental:</span>
+                    <span className="text-blue-600 font-semibold">Call for Rental</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-bold text-gray-900">3 BHK + SQ</h3>
+                  <p className="text-blue-600 font-semibold">Apartments</p>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600">Unit Size:</span>
+                    <span className="font-semibold text-gray-900">2156 - 2896 SQ.FT</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600">Price (Per SQ.FT):</span>
+                    <span className="text-blue-600 font-semibold">Call for Price</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-600">Rental:</span>
+                    <span className="text-blue-600 font-semibold">Call for Rental</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl shadow-xl p-6 border border-gray-200">
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-bold text-gray-900">4 BHK + SQ</h3>
+                  <p className="text-blue-600 font-semibold">Apartments</p>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600">Unit Size:</span>
+                    <span className="font-semibold text-gray-900">2857 - 2864 SQ.FT</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                    <span className="text-gray-600">Price (Per SQ.FT):</span>
+                    <span className="text-blue-600 font-semibold">Call for Price</span>
+                  </div>
+                  <div className="flex justify-between items-center py-2">
+                    <span className="text-gray-600">Rental:</span>
+                    <span className="text-blue-600 font-semibold">Call for Rental</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="text-center mt-12">
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 text-lg font-semibold">
+                <Phone className="h-5 w-5 mr-2" />
+                Get Detailed Pricing
+              </Button>
             </div>
           </div>
-        </div>
-      </footer>
-    </div>
+        </section>
+
+        {/* Amenities Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">World-Class Amenities</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {projectData.amenities.map((amenity, index) => (
+                <Card key={index} className="p-6">
+                  <CardContent>
+                    <div className="flex items-center mb-4">
+                      <span className="text-2xl mr-3">{amenity.icon}</span>
+                      <h3 className="text-lg font-semibold">{amenity.name}</h3>
+                    </div>
+                    <p className="text-gray-600">{amenity.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Gallery Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Project Gallery</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Take a visual tour of our stunning residences and world-class amenities that define luxury living at Grand Arch.
+              </p>
+              <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projectData.gallery.map((image, index) => (
+                <div
+                  key={index}
+                  className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105"
+                >
+                  <div className="aspect-[4/3] relative">
+                    <img
+                      src={image}
+                      alt={`Grand Arch Gallery ${index + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                        <svg
+                          className="w-6 h-6 text-white"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-white font-semibold text-sm">
+                      {index === 0 && "Grand Arch Exterior"}
+                      {index === 1 && "Luxury Living Space"}
+                      {index === 2 && "Modern Interior Design"}
+                      {index === 3 && "Premium Amenities"}
+                      {index === 4 && "Elegant Architecture"}
+                      {index === 5 && "World-Class Facilities"}
+                    </h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Gallery Navigation */}
+            <div className="mt-12 text-center">
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button
+                  variant="outline"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300"
+                >
+                  View All Photos
+                </Button>
+                <Button
+                  variant="outline"
+                  className="border-2 border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-300"
+                >
+                  Virtual Tour
+                </Button>
+                <Button
+                  variant="outline"
+                  className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors duration-300"
+                >
+                  Floor Plans
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Floor Plan Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Floor Plans</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Explore our thoughtfully designed floor plans that maximize space utilization and create the perfect living environment for your family.
+              </p>
+              <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="/grandarch-floorplan-01.webp"
+                    alt="Grand Arch Floor Plan 1"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-white font-semibold text-sm">2 BHK + 2T Floor Plan</h3>
+                </div>
+              </div>
+
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="/grandarch-floor-plan-02.webp"
+                    alt="Grand Arch Floor Plan 2"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-white font-semibold text-sm">2 BHK + 2T + SQ Floor Plan</h3>
+                </div>
+              </div>
+
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="/grandarch-floor-plan-03.webp"
+                    alt="Grand Arch Floor Plan 3"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-white font-semibold text-sm">3 BHK + SQ Floor Plan</h3>
+                </div>
+              </div>
+
+              <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="/grandarch-floor-plan-04.webp"
+                    alt="Grand Arch Floor Plan 4"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-3">
+                      <svg
+                        className="w-6 h-6 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                  <h3 className="text-white font-semibold text-sm">4 BHK + SQ Floor Plan</h3>
+                </div>
+              </div>
+            </div>
+
+            {/* Floor Plan CTA */}
+            <div className="text-center mt-12">
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 text-lg font-semibold">
+                Download Floor Plans
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Location Highlights */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Prime Location</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+                  {projectData.locationHighlights.description}
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {projectData.locationHighlights.benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-center">
+                      <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
+                      <span className="text-gray-700">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {projectData.locationHighlights.images.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Location highlight ${index + 1}`}
+                    className="w-full h-48 object-cover rounded-lg"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Master Plan Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Master Plan</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+                Discover the comprehensive master plan of IREO City, showcasing the strategic layout and world-class infrastructure that makes Grand Arch the perfect place to call home.
+              </p>
+              <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">700+ Acre Integrated Township</h3>
+                <div className="space-y-4 text-gray-700">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Strategic location at Golf Course Road Extension with 60-meter wide sector road</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Multi-dimensional tower layout with varying heights for optimal views and privacy</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Extensive open spaces and landscaped gardens throughout the development</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p>World-class amenities and infrastructure designed for modern living</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Seamless connectivity to major business hubs and lifestyle destinations</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+                  <img
+                    src="/grandarch-master-plan.webp"
+                    alt="Grand Arch Master Plan"
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
+                      <svg
+                        className="w-8 h-8 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Master Plan CTA */}
+            <div className="text-center mt-12">
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 text-lg font-semibold">
+                View Full Master Plan
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-900 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Experience Luxury Living?</h2>
+            <p className="text-xl text-blue-200 mb-8">
+              Contact our expert team to schedule a site visit and explore your dream home at {projectData.name}.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
+                <Phone className="h-5 w-5 mr-2" />
+                Call 9811750130
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900">
+                Schedule Site Visit
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
   )
 }
