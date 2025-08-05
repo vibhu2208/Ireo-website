@@ -43,7 +43,7 @@ const projects = [
     type: "Sky-high Residences",
     status: "Ready to Move",
     price: "₹3.2 Cr onwards",
-    image: "/placeholder.svg?height=300&width=400&text=IREO+Skyon",
+    image: "/skyon-gallery-01.webp",
     description: "High-rise luxury apartments with panoramic city views and premium facilities.",
   },
   {
@@ -53,7 +53,7 @@ const projects = [
     type: "Commercial Spaces",
     status: "Ready to Move",
     price: "₹1.8 Cr onwards",
-    image: "/placeholder.svg?height=300&width=400&text=The+Corridors",
+    image: "/corridors-gallery-01.webp",
     description: "Premium commercial spaces and retail outlets in a prime business location.",
   },
   {
@@ -63,7 +63,7 @@ const projects = [
     type: "Mixed-use Development",
     status: "Under Construction",
     price: "₹2.5 Cr onwards",
-    image: "/placeholder.svg?height=300&width=400&text=City+Central",
+    image: "/city-central-gallery-01.webp",
     description: "Integrated township with residential, commercial, and retail spaces.",
   },
   {
