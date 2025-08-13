@@ -11,66 +11,89 @@ const projectData = {
   name: "IREO The Corridors",
   slug: "corridors",
   heroImages: [
-    "/placeholder.svg?height=600&width=1000&text=Corridors+Building+View",
-    "/placeholder.svg?height=600&width=1000&text=Corridors+Lobby",
-    "/placeholder.svg?height=600&width=1000&text=Corridors+Amenities",
-    "/placeholder.svg?height=600&width=1000&text=Corridors+Interior",
+    "/corridors-gallery-01.webp"
   ],
   quickFacts: {
-    type: "Premium Apartments",
-    location: "Sector 67, Gurgaon",
-    area: "1890 – 4500 SQ.FT",
-    price: "₹3.8 Cr - ₹9.2 Cr",
-    accommodation: "3 & 4 BHK",
-    status: "Ready to Move",
+    type: "Residential Apartments",
+    location: "Sector 67A, Gurgaon",
+    area: "1296 - 1896 SQ.FT",
+    price: "₹ 2.14 Cr Onwards",
+    accommodation: "2 & 3 BHK",
+    status: "Ready To Move",
     possession: "Ready",
     rating: 4.8,
   },
   description: [
-    "IREO The Corridors offers premium apartment living with spacious layouts and modern amenities. This ready-to-move-in development features contemporary architecture and high-quality finishes throughout.",
-    "Strategically located in Sector 67, The Corridors provides excellent connectivity to major business hubs and lifestyle destinations. Each apartment is designed with attention to detail and premium specifications.",
-    "The development boasts world-class amenities including a clubhouse, swimming pool, fitness center, and landscaped gardens. With immediate possession available, residents can start enjoying luxury living right away.",
+    "Step up to the self-contained life at The Corridors by IREO. It's a world in its own right – a world that assimilates every aspect of life within the four walls of a gated community.",
+    "One of the largest condominiums in Gurgaon, you'll find over 10 acres of interlinked contiguous landscaped greens at The Corridors. All this within a sprawling 37.5-acre secured community. Designed as a microcosm of the outside world, The Corridors integrates the finest in living spaces with leisure amenities and essential facilities alike. So, you'll find everything from a hospital to a full-fledged high school to retail zones to sports centres within The Corridors.",
+    "Come, walk around and explore the various facets of the world that The Corridors lead you to.",
   ],
   amenities: [
-    { name: "Swimming Pool", icon: "🏊", description: "Large swimming pool complex" },
-    { name: "Fitness Center", icon: "💪", description: "Fully equipped gymnasium" },
-    { name: "Clubhouse", icon: "🏛️", description: "Premium clubhouse facilities" },
-    { name: "Landscaped Gardens", icon: "🌳", description: "Beautiful garden spaces" },
-    { name: "Kids Play Area", icon: "🎮", description: "Safe children's playground" },
-    { name: "Sports Courts", icon: "🏸", description: "Badminton and tennis courts" },
-    { name: "24/7 Security", icon: "🛡️", description: "Round-the-clock security" },
-    { name: "Power Backup", icon: "⚡", description: "100% power backup" },
-    { name: "Parking", icon: "🚗", description: "Covered parking spaces" },
-    { name: "Maintenance", icon: "🔧", description: "Professional maintenance" },
-    { name: "Community Hall", icon: "🎭", description: "Multi-purpose hall" },
-    { name: "Jogging Track", icon: "🏃", description: "Dedicated jogging path" },
+    { name: "Club House", icon: "🏛️", description: "Exclusive club house for residents" },
+    { name: "Meditation Centre", icon: "🧘", description: "Peaceful meditation and wellness center" },
+    { name: "Sports Facility", icon: "⚽", description: "Multi-sport facilities for active living" },
+    { name: "Kids Play Area", icon: "🎮", description: "Safe and fun children's play zone" },
+    { name: "Swimming Pool", icon: "🏊", description: "Refreshing swimming pool" },
+    { name: "Gymnasium", icon: "💪", description: "State-of-the-art fitness center" },
+    { name: "Parks", icon: "🌳", description: "Beautiful landscaped parks" },
+    { name: "Power Backup", icon: "⚡", description: "100% power backup facility" },
+    { name: "24x7 Water Supply", icon: "💧", description: "Round-the-clock water supply" },
+    { name: "Covered Parking", icon: "🚗", description: "Secure covered parking spaces" },
+    { name: "Open Spaces", icon: "🌿", description: "Spacious open areas for recreation" },
+    { name: "3 Tier Security", icon: "🛡️", description: "Advanced three-tier security system" },
   ],
   gallery: [
-    "/placeholder.svg?height=300&width=400&text=Corridors+Living",
-    "/placeholder.svg?height=300&width=400&text=Corridors+Bedroom",
-    "/placeholder.svg?height=300&width=400&text=Corridors+Kitchen",
-    "/placeholder.svg?height=300&width=400&text=Corridors+Balcony",
-    "/placeholder.svg?height=300&width=400&text=Corridors+Bathroom",
-    "/placeholder.svg?height=300&width=400&text=Corridors+Dining",
-    "/placeholder.svg?height=300&width=400&text=Corridors+Pool",
-    "/placeholder.svg?height=300&width=400&text=Corridors+Club",
+    "/corridors-gallery-01.webp",
+    "/corridors-gallery-02.webp",
+    "/corridors-gallery-03.webp",
+    "/corridors-gallery-04.webp",
+    "/corridors-gallery-05.webp",
+    "/corridors-gallery-06.webp",
+  ],
+  floorPlans: [
+    "/corridors-floor-plan-1296.webp",
+    "/corridors-floor-plan-1540.webp",
+    "/corridors-floor-plan-1877.webp",
+    "/corridors-floor-plan-1896.webp",
   ],
   locationHighlights: {
     description:
-      "Sector 67, Gurgaon is a well-established residential area with excellent infrastructure and connectivity. The location offers a perfect blend of urban convenience and peaceful living.",
+      "Spread over 10.96 acres at a premium location in Sector 67A, Gurgaon with an easy accessibility to NH-8, Delhi Metro and fast exit routes to Delhi & NCR. The project features a huge contiguous green covering nearly 10 acres with only 20% of land usage for buildings.",
     benefits: [
-      "3 minutes to Sohna Road",
-      "8 minutes to Golf Course Road",
-      "12 minutes to Cyber Hub",
-      "20 minutes to IGI Airport",
-      "Close to reputed schools",
-      "Near healthcare facilities",
+      "A dedicated 2 km long fitness trail with distance markers",
+      "Relaxing gardens and shaded seating areas",
+      "Unmatched connectivity via the Sohna Road, Golf Course Ext. Road & NH 8",
+      "Proximity to proposed Metro Station",
+      "30 Mins drive from International Airport",
+      "Hospitals, Schools, Shopping Malls, Business Hub of the City in proximity",
     ],
     images: [
-      "/placeholder.svg?height=250&width=350&text=Sector+67+Map",
-      "/placeholder.svg?height=250&width=350&text=Corridors+Location",
+      "/corridors-location-map.webp",
     ],
   },
+  masterPlan: "/corridors-master-plan.webp",
+  pricing: [
+    {
+      unitType: "2 BHK",
+      unitSizes: "1296 SQ.FT",
+      price: "₹ 2.14 Cr"
+    },
+    {
+      unitType: "2 BHK + ST",
+      unitSizes: "1540 SQ.FT",
+      price: "₹ 2.54 Cr"
+    },
+    {
+      unitType: "3 BHK",
+      unitSizes: "1877 SQ.FT",
+      price: "₹ 3.10 Cr"
+    },
+    {
+      unitType: "3 BHK + SQ",
+      unitSizes: "1896 SQ.FT",
+      price: "₹ 3.13 Cr"
+    }
+  ],
 }
 
 export default function CorridorsPage() {
@@ -103,6 +126,28 @@ export default function CorridorsPage() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Image Modal */}
+      {expandedImage && (
+        <div 
+          className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setExpandedImage(null)}
+        >
+          <div className="relative max-w-7xl max-h-full">
+            <button
+              onClick={() => setExpandedImage(null)}
+              className="absolute -top-12 right-0 text-white hover:text-gray-300 text-4xl font-bold z-10"
+            >
+              ×
+            </button>
+            <img
+              src={expandedImage}
+              alt="Expanded view"
+              className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        </div>
+      )}
       {/* Navigation */}
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -323,6 +368,120 @@ export default function CorridorsPage() {
         </div>
       </section>
 
+      {/* Floor Plans Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Floor Plans</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Explore the thoughtfully designed floor plans that maximize space and functionality.
+            </p>
+            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {projectData.floorPlans.map((image, index) => {
+              const sizes = ["1296", "1540", "1877", "1896"];
+              return (
+                <div key={index} className="space-y-4">
+                  <div
+                    className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 group bg-white p-4 cursor-pointer"
+                    onClick={() => setExpandedImage(image)}
+                  >
+                    <img
+                      src={image || "/placeholder.svg"}
+                      alt={`Floor Plan ${index + 1}`}
+                      className="w-full h-80 object-contain group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-lg font-semibold text-gray-900">{sizes[index]} sq ft. (Avg.)</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Table Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Pricing & Availability</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Explore our competitive pricing structure for different unit types and sizes.
+            </p>
+            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+          </div>
+
+          {/* Desktop Table */}
+          <div className="hidden lg:block overflow-hidden rounded-2xl shadow-xl border border-gray-200">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+                  <tr>
+                    <th className="px-8 py-6 text-left font-bold text-lg">Unit Type</th>
+                    <th className="px-8 py-6 text-left font-bold text-lg">Unit Sizes</th>
+                    <th className="px-8 py-6 text-left font-bold text-lg">Price</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {projectData.pricing.map((item, index) => (
+                    <tr 
+                      key={index}
+                      className={`border-b border-gray-100 transition-all duration-300 hover:bg-blue-50 hover:shadow-md ${
+                        index % 2 === 0 ? 'bg-white' : 'bg-gray-50'
+                      }`}
+                    >
+                      <td className="px-8 py-6 text-gray-900 font-semibold text-lg">{item.unitType}</td>
+                      <td className="px-8 py-6 text-gray-700 text-lg">{item.unitSizes}</td>
+                      <td className="px-8 py-6">
+                        <span className="bg-blue-100 text-blue-800 font-bold text-lg px-4 py-2 rounded-lg">
+                          {item.price}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Mobile Cards */}
+          <div className="lg:hidden space-y-4">
+            {projectData.pricing.map((item, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="text-xl font-bold text-gray-900">{item.unitType}</h3>
+                  <span className="bg-blue-100 text-blue-800 font-bold text-lg px-4 py-2 rounded-lg">
+                    {item.price}
+                  </span>
+                </div>
+                <div className="flex items-center space-x-2 text-gray-700">
+                  <span className="text-lg">📏</span>
+                  <span className="text-lg">{item.unitSizes}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-gray-600 text-sm">
+              *Prices are subject to change. Contact us for the latest pricing and availability.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Image Gallery */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -334,11 +493,12 @@ export default function CorridorsPage() {
             <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projectData.gallery.map((image, index) => (
               <div
                 key={index}
-                className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
+                className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 group cursor-pointer"
+                onClick={() => setExpandedImage(image)}
               >
                 <img
                   src={image || "/placeholder.svg"}
@@ -346,6 +506,11 @@ export default function CorridorsPage() {
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                  </svg>
+                </div>
               </div>
             ))}
           </div>
@@ -374,17 +539,47 @@ export default function CorridorsPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-6">
-              {projectData.locationHighlights.images.map((image, index) => (
-                <div key={index} className="relative overflow-hidden rounded-2xl shadow-xl">
-                  <img
-                    src={image || "/placeholder.svg"}
-                    alt={`Location ${index + 1}`}
-                    className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-                </div>
-              ))}
+            <div className="relative overflow-hidden rounded-2xl shadow-xl cursor-pointer group" onClick={() => setExpandedImage(projectData.locationHighlights.images[0])}>
+              <img
+                src={projectData.locationHighlights.images[0] || "/placeholder.svg"}
+                alt="Corridors Location"
+                className="w-full h-96 object-cover hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+              <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Master Plan Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Master Plan</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Discover the comprehensive master plan that showcases the strategic layout and development vision of The Corridors.
+            </p>
+            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="relative overflow-hidden rounded-2xl shadow-xl cursor-pointer group max-w-6xl" onClick={() => setExpandedImage(projectData.masterPlan)}>
+              <img
+                src={projectData.masterPlan || "/placeholder.svg"}
+                alt="Corridors Master Plan"
+                className="w-full h-auto object-contain hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
