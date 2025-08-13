@@ -1,31 +1,11 @@
-import type { Metadata } from "next"
-import { Phone, MapPin, Home, Users, Calendar, Star, CheckCircle, Award, Building } from "lucide-react"
+import { MapPin, Home, Users, Calendar, Star, CheckCircle, Award, Building, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { StructuredData } from "@/components/structured-data"
+import ScheduleVisitCTA from "@/components/schedule-visit-cta"
 
-export const metadata: Metadata = {
-  title: "IREO Grand Arch - Premium Apartments in Sector 58, Gurgaon",
-  description: "Discover IREO Grand Arch - Premium 3 & 4 BHK apartments in Sector 58, Gurgaon. Ready to move with luxury amenities, swimming pool, fitness center & more. Starting ₹2.8 Cr.",
-  keywords: "IREO Grand Arch, Sector 58 Gurgaon, premium apartments, 3 BHK, 4 BHK, ready to move, luxury amenities",
-  alternates: {
-    canonical: "/grandarch",
-  },
-  openGraph: {
-    title: "IREO Grand Arch - Premium Apartments in Sector 58, Gurgaon",
-    description: "Discover IREO Grand Arch - Premium 3 & 4 BHK apartments in Sector 58, Gurgaon. Ready to move with luxury amenities.",
-    url: "/grandarch",
-    images: [
-      {
-        url: "/placeholder.svg?height=600&width=1000&text=Grand+Arch+Exterior",
-        width: 1200,
-        height: 630,
-        alt: "IREO Grand Arch - Premium Apartments in Gurgaon",
-      },
-    ],
-  },
-}
+export const dynamic = "force-static"
 
 const projectData = {
   name: "IREO The Grand Arch",
@@ -89,6 +69,7 @@ const projectData = {
 }
 
 export default function GrandArchPage() {
+
   return (
     <>
       <StructuredData 
@@ -116,15 +97,10 @@ export default function GrandArchPage() {
                 <h1 className="text-4xl md:text-6xl font-bold mb-4">{projectData.name}</h1>
                 <p className="text-xl md:text-2xl mb-6">{projectData.quickFacts.location}</p>
                 <p className="text-lg md:text-xl mb-8">{projectData.quickFacts.type}</p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                    <Phone className="h-5 w-5 mr-2" />
-                    Call 9811750130
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
-                    Schedule Site Visit
-                  </Button>
-                </div>
+                <ScheduleVisitCTA
+                  callButtonClassName="bg-blue-600 hover:bg-blue-700"
+                  scheduleButtonClassName="border-white text-white hover:bg-white hover:text-gray-900"
+                />
               </div>
             </div>
           </div>
@@ -725,15 +701,7 @@ export default function GrandArchPage() {
             <p className="text-xl text-blue-200 mb-8">
               Contact our expert team to schedule a site visit and explore your dream home at {projectData.name}.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-                <Phone className="h-5 w-5 mr-2" />
-                Call 9811750130
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900">
-                Schedule Site Visit
-              </Button>
-            </div>
+            <ScheduleVisitCTA />
           </div>
         </section>
       </main>

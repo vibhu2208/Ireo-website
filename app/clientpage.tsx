@@ -100,8 +100,8 @@ const projects = [
   },
   {
     id: 7,
-    name: "IREO Waterfront",
-    slug: "waterfront",
+    name: "IREO Gurgaonhills",
+    slug: "gurgaonhills",
     location: "Sector 58, Gurgaon",
     type: "Waterfront Residences",
     price: "₹4.2 Cr - ₹12.8 Cr",
@@ -438,11 +438,11 @@ export default function HomePage() {
                 <a href="/grandarch" className="text-gray-400 hover:text-white block">
                   Grand Arch
                 </a>
-                <a href="/waterfront" className="text-gray-400 hover:text-white block">
-                  Waterfront
+                <a href="/gurgaonhills" className="text-gray-400 hover:text-white block">
+                  Gurgaon Hills
                 </a>
-                <a href="/thevillage" className="text-gray-400 hover:text-white block">
-                  The Village
+                <a href="/victoryvalley" className="text-gray-400 hover:text-white block">
+                  Victory Valley
                 </a>
               </div>
             </div>

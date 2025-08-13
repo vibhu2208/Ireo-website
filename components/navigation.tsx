@@ -13,8 +13,8 @@ const projects = [
   { name: "IREO Skyon", slug: "skyon" },
   { name: "IREO The Corridors", slug: "corridors" },
   { name: "IREO City Central", slug: "citycentral" },
-  { name: "IREO Waterfront", slug: "waterfront" },
-  { name: "IREO The Village", slug: "thevillage" },
+  { name: "IREO Gurgaon Hills", slug: "gurgaonhills" },
+  { name: "IREO Victory Valley", slug: "victoryvalley" },
 ]
 
 export default function Navigation() {

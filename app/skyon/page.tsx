@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Phone, MapPin, Home, Users, Calendar, Star, 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
+import ScheduleVisitPopup from "@/components/schedule-visit-popup"
 
 const projectData = {
   name: "IREO Skyon",
@@ -75,6 +76,7 @@ const projectData = {
 export default function SkyonPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [showPopup, setShowPopup] = useState(false)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -173,6 +175,7 @@ export default function SkyonPage() {
                       size="lg"
                       variant="outline"
                       className="border-2 border-white text-white hover:bg-white hover:text-gray-900 bg-transparent px-8 py-4 text-lg"
+                      onClick={() => setShowPopup(true)}
                     >
                       Schedule Site Visit
                     </Button>
@@ -416,6 +419,7 @@ export default function SkyonPage() {
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-gray-900 bg-transparent px-8 py-4 text-lg font-semibold"
+              onClick={() => setShowPopup(true)}
             >
               Schedule Site Visit
             </Button>
@@ -443,6 +447,13 @@ export default function SkyonPage() {
           </div>
         </div>
       </footer>
+
+      {showPopup && (
+        <ScheduleVisitPopup
+          isOpen={showPopup}
+          onClose={() => setShowPopup(false)}
+        />
+      )}
     </div>
   )
 }

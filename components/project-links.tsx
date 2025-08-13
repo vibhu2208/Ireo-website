@@ -10,8 +10,8 @@ const allProjects = [
   { name: "IREO Skyon", slug: "skyon", type: "Sky-high Residences" },
   { name: "IREO The Corridors", slug: "corridors", type: "Commercial Spaces" },
   { name: "IREO City Central", slug: "citycentral", type: "Mixed-use Development" },
-  { name: "IREO Waterfront", slug: "waterfront", type: "Waterfront Residences" },
-  { name: "IREO The Village", slug: "thevillage", type: "Independent Villas" },
+  { name: "IREO Gurgaon Hills", slug: "gurgaonhills", type: "Gurgaon Hills Residences" },
+  { name: "IREO Victory Valley", slug: "victoryvalley", type: "Independent Villas" },
 ]
 
 interface ProjectLinksProps {

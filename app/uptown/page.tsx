@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight, Phone, MapPin, Home, Users, Calendar, Star, 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
+import ScheduleVisitPopup from "@/components/schedule-visit-popup"
 
 const projectData = {
   name: "IREO Uptown",
@@ -71,6 +72,7 @@ const projectData = {
 export default function UptownPage() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [showPopup, setShowPopup] = useState(false)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -169,6 +171,7 @@ export default function UptownPage() {
                       size="lg"
                       variant="outline"
                       className="border-2 border-white text-white hover:bg-white hover:text-gray-900 bg-transparent px-8 py-4 text-lg"
+                      onClick={() => setShowPopup(true)}
                     >
                       Schedule Site Visit
                     </Button>
@@ -633,11 +636,11 @@ export default function UptownPage() {
 
        {/* Location Highlights */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Premium Location</h2>
-            <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
-          </div>
+         <div className="max-w-7xl mx-auto">
+           <div className="text-center mb-16">
+             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Premium Location</h2>
+             <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+           </div>
 
                      <div className="grid lg:grid-cols-2 gap-16 items-center">
              <div>
@@ -775,6 +778,7 @@ export default function UptownPage() {
               size="lg"
               variant="outline"
               className="border-2 border-white text-white hover:bg-white hover:text-gray-900 bg-transparent px-8 py-4 text-lg font-semibold"
+              onClick={() => setShowPopup(true)}
             >
               Schedule Site Visit
             </Button>
@@ -802,6 +806,13 @@ export default function UptownPage() {
           </div>
         </div>
       </footer>
+
+      {showPopup && (
+        <ScheduleVisitPopup
+          isOpen={showPopup}
+          onClose={() => setShowPopup(false)}
+        />
+      )}
     </div>
   )
 }

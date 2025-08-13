@@ -10,8 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'skyon',
     'corridors',
     'citycentral',
-    'waterfront',
-    'thevillage'
+    'gurgaonhills',
+    'victoryvalley'
   ]
 
   const projectUrls = projects.map((project) => ({

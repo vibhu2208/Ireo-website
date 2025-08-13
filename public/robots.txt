@@ -17,8 +17,8 @@ Allow: /uptown/
 Allow: /skyon/
 Allow: /corridors/
 Allow: /citycentral/
-Allow: /waterfront/
-Allow: /thevillage/
+Allow: /gurgaonhills/
+Allow: /victorvalley/
 
 # Crawl delay
 Crawl-delay: 1 

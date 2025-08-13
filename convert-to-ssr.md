@@ -84,8 +84,8 @@ import { StructuredData } from "@/components/structured-data"
 - [ ] `app/skyon/page.tsx`
 - [ ] `app/corridors/page.tsx`
 - [ ] `app/citycentral/page.tsx`
-- [ ] `app/waterfront/page.tsx`
-- [ ] `app/thevillage/page.tsx`
+- [ ] `app/gurgaonhills/page.tsx`
+- [ ] `app/victoryvalley/page.tsx`
 
 ## 📈 **SEO Benefits:**
 
