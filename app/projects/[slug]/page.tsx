@@ -137,7 +137,7 @@ export default function ProjectDetailPage({ params }: ProjectDetailPageProps) {
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
               <a href="/">
-                <img src="/placeholder.svg?height=40&width=120&text=IREO+Logo" alt="IREO Projects" className="h-10" />
+                <img src="/logo.webp" alt="IREO Projects" className="h-10" />
               </a>
             </div>
             <div className="flex items-center space-x-2 text-gray-700">

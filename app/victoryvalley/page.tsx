@@ -51,9 +51,11 @@ const projectData = {
     "/victory-valley-gallery-06.webp",
   ],
   floorPlans: [
-    "/victory-valley-floor-plan-2bhk.webp",
-    "/victory-valley-floor-plan-3bhk.webp",
-    "/victory-valley-floor-plan-4bhk.webp",
+    "/Victory-valley-floor-plan-1435.webp",
+    "/Victory-valley-floor-plan-2452.webp",
+    "/Victory-valley-floor-plan-2847.webp",
+    "/Victory-valley-floor-plan-3192.webp",
+    "/Victory-valley-floor-plan-5970.webp",
   ],
   locationHighlights: {
     description:
@@ -70,7 +72,7 @@ const projectData = {
       "Intelligent Hot and Cold Air Conditioning",
     ],
     images: [
-      "/victory-valley-location-map.webp",
+      "/Victory-valley-location.webp",
     ],
   },
   masterPlan: "/victory-valley-master-plan.webp",
@@ -507,7 +509,7 @@ export default function VictoryValleyPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projectData.floorPlans.map((image, index) => {
-              const floorNames = ["2 BHK", "3 BHK", "4 BHK"];
+              const floorNames = ["1435 SQ.FT", "2452 SQ.FT", "2847 SQ.FT", "3192 SQ.FT", "5970 SQ.FT"];
               return (
                 <div key={index} className="space-y-4">
                   <div

@@ -4,17 +4,16 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { StructuredData } from "@/components/structured-data"
 import ScheduleVisitCTA from "@/components/schedule-visit-cta"
+import Footer from "@/components/footer"
 
 export const dynamic = "force-static"
-
+  
 const projectData = {
   name: "IREO The Grand Arch",
   slug: "grandarch",
   heroImages: [
-    "/grandarch-gallery-01.webp",
-    "/placeholder.svg?height=600&width=1000&text=Grand+Arch+Lobby",
-    "/placeholder.svg?height=600&width=1000&text=Grand+Arch+Amenities",
-    "/placeholder.svg?height=600&width=1000&text=Grand+Arch+Interior",
+    "/grandarch-gallery-01.webp"
+    
   ],
   quickFacts: {
     type: "Residential Apartments",
@@ -693,6 +692,7 @@ export default function GrandArchPage() {
             </div>
           </div>
         </section>
+        
 
         {/* CTA Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-blue-900 text-white">
@@ -704,6 +704,7 @@ export default function GrandArchPage() {
             <ScheduleVisitCTA />
           </div>
         </section>
+        <Footer />
       </main>
     </>
   )

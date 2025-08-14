@@ -1,24 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://ireo-projects.vercel.app/sitemap.xml
+# Host
+Host: https://ireoprojects.com
 
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-
-# Allow important pages
-Allow: /projects/
-Allow: /grandarch/
-Allow: /grandhyatt/
-Allow: /uptown/
-Allow: /skyon/
-Allow: /corridors/
-Allow: /citycentral/
-Allow: /gurgaonhills/
-Allow: /victorvalley/
-
-# Crawl delay
-Crawl-delay: 1 
+# Sitemaps
+Sitemap: https://ireoprojects.com/sitemap.xml

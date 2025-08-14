@@ -1,10 +1,12 @@
+"use client"
+
 import Link from "next/link"
 import { ArrowRight, MapPin, Phone, Mail, Clock, Award, Users, Building } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { OrganizationStructuredData } from "@/components/structured-data"
-
+import Footer from "@/components/footer"
 const projects = [
   {
     name: "IREO Grand Hyatt Residences",
@@ -254,6 +256,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+        <Footer />
       </main>
     </>
   )

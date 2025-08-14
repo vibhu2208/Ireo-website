@@ -26,7 +26,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <span className="text-2xl font-bold text-blue-600">IREO</span>
+            <img src="/logo.webp" alt="IREO Projects" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

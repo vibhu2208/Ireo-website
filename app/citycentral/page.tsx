@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import ScheduleVisitPopup from "@/components/schedule-visit-popup"
+import Footer from "@/components/footer"
 
 const projectData = {
   name: "IREO City Central",
@@ -110,6 +111,9 @@ export default function CityCentralPage() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [showPopup, setShowPopup] = useState(false)
 
+  const [expandedImage, setExpandedImage] = useState<string | null>(null)
+  const [showFullDescription, setShowFullDescription] = useState<boolean>(false)
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % projectData.heroImages.length)
@@ -169,7 +173,7 @@ export default function CityCentralPage() {
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
               <a href="/">
-                <img src="/placeholder.svg?height=40&width=120&text=IREO+Logo" alt="IREO Projects" className="h-10" />
+                <img src="/logo.webp" alt="IREO Projects" className="h-10" />
               </a>
             </div>
             <div className="flex items-center space-x-4">
@@ -659,25 +663,7 @@ export default function CityCentralPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="mb-8">
-              <img
-                src="/placeholder.svg?height=50&width=150&text=IREO+Logo"
-                alt="IREO Projects"
-                className="h-12 mx-auto mb-6"
-              />
-              <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                Creating world-class residential and commercial spaces that redefine modern living in Gurgaon.
-              </p>
-            </div>
-            <div className="border-t border-gray-800 pt-8">
-              <p className="text-gray-400">© 2025. All Rights Reserved. | IREO Projects | 9811750130</p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       {showPopup && (
         <ScheduleVisitPopup

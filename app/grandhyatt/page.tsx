@@ -14,7 +14,7 @@ const projectData = {
   name: "IREO Grand Hyatt Residences",
   slug: "grandhyatt",
   heroImages: [
-    "/grandhyatt-gallery-01.jpg"
+    "/grandhyatt04.webp"
   ],
   quickFacts: {
     type: "Residential Apartments",
@@ -290,30 +290,6 @@ export default function GrandHyattPage() {
               </div>
             ))}
 
-          </div>
-
-          {/* Gallery Navigation */}
-          <div className="mt-12 text-center">
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                variant="outline"
-                className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white transition-colors duration-300"
-              >
-                View All Photos
-              </Button>
-              <Button
-                variant="outline"
-                className="border-2 border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white transition-colors duration-300"
-              >
-                Virtual Tour
-              </Button>
-              <Button
-                variant="outline"
-                className="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white transition-colors duration-300"
-              >
-                Floor Plans
-              </Button>
-            </div>
           </div>
         </div>
       </section>
