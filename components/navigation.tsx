@@ -57,12 +57,12 @@ export default function Navigation() {
             {/* Phone Number and Call Button */}
             <div className="flex items-center space-x-3">
               <div className="text-sm text-gray-600">
-                <div className="font-semibold">+91 9999-888-777</div>
+                <div className="font-semibold">+91 9811 750 130</div>
               </div>
               <Button asChild size="sm" className="bg-green-600 hover:bg-green-700">
-                <a href="tel:+919999888777" className="flex items-center">
+                <a href="https://wa.me/919811750130" className="flex items-center">
                   <Phone className="h-4 w-4 mr-1" />
-                  Call Now
+                  WhatsApp
                 </a>
               </Button>
             </div>
@@ -111,12 +111,12 @@ export default function Navigation() {
                   {/* Mobile Phone Section */}
                   <div className="pt-4 border-t">
                     <div className="text-sm text-gray-600 mb-3">
-                      <div className="font-semibold">+91 9999-888-777</div>
+                      <div className="font-semibold">+91 9811 750 130</div>
                     </div>
                     <Button asChild className="w-full bg-green-600 hover:bg-green-700">
-                      <a href="tel:+919999888777" className="flex items-center justify-center">
+                      <a href="https://wa.me/919811750130" className="flex items-center justify-center">
                         <Phone className="h-4 w-4 mr-2" />
-                        Call Now
+                        WhatsApp
                       </a>
                     </Button>
                   </div>
