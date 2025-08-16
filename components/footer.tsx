@@ -157,15 +157,7 @@ export default function Footer() {
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-3">
-                  <div className="bg-blue-600 p-2 rounded-full">
-                    <Mail className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <p className="font-semibold">Email</p>
-                    <p className="text-gray-400">info@ireoprojects.com</p>
-                  </div>
-                </div>
+                
                 
                 <div className="flex items-center space-x-3">
                   <div className="bg-blue-600 p-2 rounded-full">
