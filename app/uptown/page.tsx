@@ -206,6 +206,14 @@ export default function UptownPage() {
         </div>
       </section>
 
+      {/* Popup Form */}
+      {showPopup && (
+        <ScheduleVisitPopup
+          isOpen={showPopup}
+          onClose={() => setShowPopup(false)}
+        />
+      )}
+
       {/* Quick Facts Section */}
       <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100&text=Pattern')] opacity-10"></div>
@@ -405,7 +413,7 @@ export default function UptownPage() {
 
           {/* CTA Button */}
           <div className="text-center mt-12">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 text-lg font-semibold">
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 px-8 py-4 text-lg font-semibold" onClick={() => setShowPopup(true)}>
               <Phone className="h-5 w-5 mr-2" />
               Get Detailed Pricing
             </Button>

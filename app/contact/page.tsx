@@ -1,7 +1,7 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { X, Send } from "lucide-react"
+import { useState } from "react"
+import { Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -15,87 +15,56 @@ const allProjects = [
   { name: "IREO The Corridors", slug: "corridors" },
   { name: "IREO City Central", slug: "citycentral" },
   { name: "IREO Victory Valley", slug: "victoryvalley" },
-  { name: "IREO Gurgaon Hills", slug: "gurgaonhills" }
+  { name: "IREO Gurgaon Hills", slug: "gurgaonhills" },
 ]
 
-interface ScheduleVisitPopupProps {
-  isOpen: boolean
-  onClose: () => void
-}
-
-export default function ScheduleVisitPopup({ isOpen, onClose }: ScheduleVisitPopupProps) {
+export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: "",
     number: "",
-    property: ""
+    property: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-
-  // Close on Escape key
-  useEffect(() => {
-    const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose()
-    }
-    document.addEventListener("keydown", onKeyDown)
-    return () => document.removeEventListener("keydown", onKeyDown)
-  }, [onClose])
+  const [status, setStatus] = useState<null | { ok: boolean; message: string }>(null)
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({
-      ...prev,
-      [field]: value
-    }))
+    setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setStatus(null)
 
     try {
-      // Send form data to API
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       })
 
-      if (!response.ok) {
-        throw new Error('Failed to submit form')
-      }
+      if (!response.ok) throw new Error("Failed to submit form")
 
-      // Reset form
       setFormData({ name: "", number: "", property: "" })
+      setStatus({ ok: true, message: "Thank you! We'll contact you within 24 hours." })
+    } catch (err) {
+      console.error(err)
+      setStatus({ ok: false, message: "Something went wrong. Please try again or call us at 9811750130." })
+    } finally {
       setIsSubmitting(false)
-      onClose()
-
-      // Show success message
-      alert("Thank you for your inquiry! We'll get back to you within 24 hours to schedule your site visit.")
-    } catch (error) {
-      console.error('Error submitting form:', error)
-      setIsSubmitting(false)
-      alert("Sorry, there was an error submitting your form. Please try again or call us directly at 9811750130.")
     }
   }
 
-  if (!isOpen) return null
-
   return (
-    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" onClick={onClose}>
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-        <div className="p-6">
-          <div className="flex justify-between items-center mb-6">
-            <h3 className="text-2xl font-bold text-gray-900">Schedule Site Visit</h3>
-            <button
-              onClick={onClose}
-              className="text-gray-400 hover:text-gray-600 transition-colors"
-            >
-              <X className="h-6 w-6" />
-            </button>
-          </div>
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 pt-28 pb-20 px-4">
+      <div className="max-w-3xl mx-auto">
+        <div className="text-center mb-10">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">Contact Us</h1>
+          <p className="text-gray-600 mt-3">Have a question or want to schedule a site visit? Fill out the form and our team will reach out shortly.</p>
+        </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div className="space-y-2">
               <Label htmlFor="name" className="text-gray-700 font-medium">Full Name *</Label>
               <Input
@@ -151,19 +120,21 @@ export default function ScheduleVisitPopup({ isOpen, onClose }: ScheduleVisitPop
               ) : (
                 <div className="flex items-center">
                   <Send className="h-4 w-4 mr-2" />
-                  Schedule Visit
+                  Submit
                 </div>
               )}
             </Button>
-          </form>
 
-          <div className="mt-6 text-center">
-            <p className="text-sm text-gray-600">
-              Our team will contact you within 24 hours to confirm your site visit.
-            </p>
-          </div>
+            {status && (
+              <div className={`text-sm ${status.ok ? "text-green-600" : "text-red-600"}`}>{status.message}</div>
+            )}
+          </form>
+        </div>
+
+        <div className="text-center text-gray-600 mt-6">
+          Or reach us directly at <a href="tel:+919811750130" className="text-blue-600 font-semibold">+91 9811 750 130</a>
         </div>
       </div>
-    </div>
+    </main>
   )
-} 
+}

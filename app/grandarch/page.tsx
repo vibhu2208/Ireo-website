@@ -98,7 +98,7 @@ export default function GrandArchPage() {
                 <p className="text-lg md:text-xl mb-8">{projectData.quickFacts.type}</p>
                 <ScheduleVisitCTA
                   callButtonClassName="bg-blue-600 hover:bg-blue-700"
-                  scheduleButtonClassName="border-white text-white hover:bg-white hover:text-gray-900"
+                  scheduleButtonClassName="border-white text-black hover:bg-white hover:text-gray-900"
                 />
               </div>
             </div>
